@@ -75,12 +75,6 @@ Based upon the strategy the features and functionality I want to include are as 
 -	A search box where the admin user can search for reviews.
 -	An accordion containing all the reviews with options to delete or edit them for the admin user.
 
-### functionality To Leave Out
-
--	The ability to upload pictures.
--	Each car in its own category of make.
--	A previously owned cars section on the profile page.
-
 ## Structure
 
 The site will be structured in a linear format keeping the users’ expectations as the main priority. 
@@ -120,10 +114,105 @@ to keep a consistent and clean UX.
 -	An accordion with the title “All Reviews” containing all the reviews so the user can browse through them.
 -	Each dropdown will have the title of the make and model of car and the year.
 -	Each dropdown will contain the information:
-        - Make
-        - Model
-        -  Year
-o	Review
-o	Radio button star rating out of 5.
+    * Make
+    * Model
+    * Year
+	* Review
+	* Radio button star rating out of 5.
+
+Nav Links:  
+Logged out – Home | profile (takes you to login) | New review (takes you to login) | Login.  
+Logged in – Home | Profile  | New Review | Logout.  
+Admin – Home | Profile | New Review | Manage Reviews | Logout.
+
+### Profile Page
+
+-	Main title of Users Profile and below to the left “Your Reviews” 
+-	Accordion containing the current profile owners’ reviews.
+-	Each dropdown will have the title of the make and model of car and the year.
+-	Each dropdown will contain the information:
+    * Make
+    * Model
+    * Year
+	* Review
+	* Radio button star rating out of 5.
+-	Buttons so they can edit and delete their reviews on the accordion.
+-	Central button below that links to new review page.
+
+Nav Links:  
+Logged in – Home | Profile | New Review | Logout.  
+Admin – Home | Profile | New Review | Manage Reviews | Logout.
+
+### New Review Page
+
+-	Title of “New Review”
+-	A form for the user to fill out containing text boxes for the make, model, year and review.
+-	Star rating radio buttons for the user to rate the car from 1 to 5.
+-	A central save button below.
+
+Nav Links:  
+Logged in – Home | Profile | New Review | Logout.  
+Admin – Home | Profile | New Review | Manage Reviews | Logout.
+
+### Login Page
+
+-	Title of “Login”
+-	Central container with 2 text boxes for the user to enter their username and password.
+-	Text boxes will have the labels username and password with suitable icons on the left of the labels.
+-	Login button.
+-	A link to register if not already registered.
+
+Nav links:  
+Logged out – Home | Profile (takes you to login) | New Review (takes you to login) | Register.
+
+### Register Page
+
+-	Title of “Register”
+-	Central container with 2 text boxes for the user to enter their username and password.
+-	Text boxes will have the labels username and password with suitable icons on the left of the labels.
+-	Save button.
+-	A link to login if already registered.
+
+Nav links:  
+Logged out – Home | Profile (takes you to login) | New Review (takes you to login) | Login.
+
+### Edit Page
+
+-	Title of “Edit Review”
+-	A form with the ability to edit make, model, year and review.
+-	Star rating radio buttons for the user to edit the rating of the car from 1 to 5.
+-	A save button.
+-	A cancel button.
+
+Nav Links:  
+Logged in – Home | Profile | New Review | Logout.  
+Admin – Home | Profile | New Review | Manage Reviews | Logout.
+
+
+### Manage Reviews Page (Admin Only)
+
+-	Title of “Manage reviews.
+-	A central search box where the admin user can search for reviews.
+-	Accordion containing all the owners’ reviews.
+-	Each dropdown will have the title of the make and model of car and the year.
+-	Each dropdown will contain the information:
+    * Make
+    * Model
+    * Year
+	* Review
+	* Radio button star rating out of 5.
+-	Buttons so they can edit and delete their reviews on the accordion.
+
+Nav Links:  
+Admin – Home | Profile | New Review | Manage Reviews | Logout.
+
+### Features To Add In The Future
+-	The ability to upload pictures to the profiles, these could be of the car or the user or both.
+-	Each car in its own category of make. This would make browsing through the cars easier.
+-	Users ability to see previously owned cars of each reviewer so they can gauge the prior knowledge of the reviewer. 
+
+
+
+
 
 
