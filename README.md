@@ -226,6 +226,62 @@ to keep a consistent and clean UX.
 
 #### Mobile
 
+<details>
+<summary>Mobile Home (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-home.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile Profile (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-profile.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile New Review (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-new-review.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile Login (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-login.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile Register (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-register.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile Edit Review (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-edit-review.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile Manage Reviews (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/mobile-manage-reviews.png)
+</p>
+</details>
+
 ## Surface
 
 ### Theme
