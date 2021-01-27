@@ -86,3 +86,44 @@ Based upon the strategy the features and functionality I want to include are as 
 The site will be structured in a linear format keeping the users’ expectations as the main priority. 
 It will contain 7 pages each with the same navbar and footer. The layout will be similar across all pages 
 to keep a consistent and clean UX.
+
+## Skeleton 
+
+### Wireframes
+
+## Surface
+
+### Typography
+
+### Colour Scheme
+
+## Features
+
+### Navbar
+
+-	All pages will contain the navbar.
+-	Page name on the left-hand side.
+-	Navigation links on the right-hand side.
+-	Navbar colour will be #.....
+-	The navbar links will differ depending on if and who is logged in and on what page. (see each page)
+
+### Footer
+
+-	All pages will contain the same footer.
+-	Containing contact and copyright information on the left and social media links on the right.
+
+### Home Page
+
+-	Car related full width hero image at the top of the page.
+-	A paragraph welcoming the user and explaining the websites purpose with buttons to register and login below.
+-	A search box with the title “search reviews”, where the user can search through all reviews.
+-	An accordion with the title “All Reviews” containing all the reviews so the user can browse through them.
+-	Each dropdown will have the title of the make and model of car and the year.
+-	Each dropdown will contain the information:
+        - Make
+        - Model
+        -  Year
+o	Review
+o	Radio button star rating out of 5.
+
+
