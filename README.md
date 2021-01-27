@@ -20,7 +20,7 @@
     * [Login Page](#Login-Page)
     * [Register Page](#Register-Page)
     * [Edit Page](#Edit-Page)
-    * [Manage Reviews Page](#Manage-Reviews-Page-(Admin-Only))
+    * [Manage Reviews Page](#Manage-Reviews-Page)
     * [Features To Add In The Future](#Features-To-Add-In-The-Future)
 
 ## Purpose
@@ -168,9 +168,67 @@ to keep a consistent and clean UX.
 
 #### Tablet
 
+<details>
+<summary>Tablet Home (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-home.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet Profile (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-profile.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet New Review (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-new-review.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet Login (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-login.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet Register (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-register.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet Edit Review (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-edit-review.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet Manage Reviews (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/tablet-manage-reviews.png)
+</p>
+</details>
+
 #### Mobile
 
 ## Surface
+
+### Theme
 
 ### Typography
 
