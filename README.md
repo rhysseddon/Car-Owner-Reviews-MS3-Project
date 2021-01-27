@@ -85,6 +85,68 @@ to keep a consistent and clean UX.
 
 ### Wireframes
 
+#### Desktop
+
+<details>
+<summary>Desktop Home (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-home.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop Profile (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-profile.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop New Review (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-new-review.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop Login (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-login.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop Register (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-register.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop Edit Review (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-edit-review.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop Manage Reviews (Click for image)</summary>
+<p align="center">
+
+![Image](assets/wireframes/desktop-manage-reviews.png)
+</p>
+</details>
+
+#### Tablet
+
+#### Mobile
+
 ## Surface
 
 ### Typography
