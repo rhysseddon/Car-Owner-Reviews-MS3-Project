@@ -37,4 +37,52 @@ As an admin user I require the ability to:
 -	Delete or edit all member reviews.
 -	Search all members reviews.
 
+# UX
 
+## Strategy
+
+As the site owner my goal is to create a place for car owners to share their experience of owning a particular car and provide this information clearly to other users of the site.  To achieve this, I aim provide users with the ability to:
+-	Add their own reviews.
+-	Browse other users’ reviews.
+-	Search other users’ reviews.
+The target audience for the site will be:
+-	Users that want to inform everyone of how good or bad their car is.
+-	Users that are looking to buy a new car and require impartial information.
+-	Users who have a general interest in cars.
+
+### User Expectations
+
+The user should:
+-	Be able to navigate the site easily.
+-	Expect the site to load quickly.
+-	Read other users reviews.
+-	Create, read, update and delete their own reviews.
+
+## Scope
+
+Based upon the strategy the features and functionality I want to include are as follows:
+-	Car related hero image
+-	A paragraph welcoming the user and explaining the websites purpose.
+-	Ability to register, login and logout.
+-	A search box where the user can search for reviews.
+-	An accordion containing all the reviews so the user can browse through them.
+-	An accordion containing the current profile owners’ reviews.
+-	Ability for the user create, read, edit or delete their reviews.
+-	A form for the user to fill out containing the make, model, year and review.
+-	Star rating radio buttons for the user to rate the car from 1 to 5.
+-	A form with the ability to edit make, model, year and review.
+-	Star rating radio buttons for the user to edit the rating of the car from 1 to 5.
+-	A search box where the admin user can search for reviews.
+-	An accordion containing all the reviews with options to delete or edit them for the admin user.
+
+### functionality To Leave Out
+
+-	The ability to upload pictures.
+-	Each car in its own category of make.
+-	A previously owned cars section on the profile page.
+
+## Structure
+
+The site will be structured in a linear format keeping the users’ expectations as the main priority. 
+It will contain 7 pages each with the same navbar and footer. The layout will be similar across all pages 
+to keep a consistent and clean UX.
