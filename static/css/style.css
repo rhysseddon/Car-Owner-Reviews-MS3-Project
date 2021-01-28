@@ -1,4 +1,6 @@
-
+.flash-messages h4 {
+    line-height: 2;
+}
 
 /* Mobile view */
 @media (max-width: 500px) {
