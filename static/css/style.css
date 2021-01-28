@@ -1,0 +1,7 @@
+
+/* Mobile view */
+@media (max-width: 500px) {
+nav .brand-logo {
+font-size: 1.3rem;
+}
+}
