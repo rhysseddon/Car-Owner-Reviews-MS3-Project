@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Google fonts CDN -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Faster+One&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css"/>
@@ -18,13 +21,13 @@
         <nav class="nav-extended grey darken-2">
             <!-- Navbar  -->
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_reviews') }}" class="brand-logo">Car Owner Reviews</a>
+                <a href="{{ url_for('get_reviews') }}" class="brand-logo left">Car Owner Reviews</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_reviews') }}">Home</a></li>
                     <li><a href="#">Pofile</a></li>
                     <li><a href="#">New Review</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
                     <li><a href="#">Logout</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="#">Manage Reviews</a></li>
@@ -37,7 +40,7 @@
                     <li><a href="{{ url_for('get_reviews') }}">Home</a></li>
                     <li><a href="#">Pofile</a></li>
                     <li><a href="#">New Review</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
                     <li><a href="#">Logout</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="#">Manage Reviews</a></li>
@@ -57,7 +60,7 @@
         {% endwith %}
     </section>
 
-    <main class="container"></main>
+    <main class="container">
         {% block content %}
         {% endblock %}
     </main>

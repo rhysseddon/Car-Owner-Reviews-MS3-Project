@@ -1,5 +1,16 @@
+nav, h1, h2, h3 {
+    font-family: 'Faster One', cursive;
+    letter-spacing: 2px;
+}
+
+body, button {
+    font-family: 'Contrail One', cursive;
+    
+}
+
 .flash-messages h4 {
     line-height: 2;
+    font-family: 'Faster One', cursive;
 }
 
 /* Mobile view */

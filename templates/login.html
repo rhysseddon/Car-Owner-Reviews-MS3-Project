@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Register</h3>
+<h3 class="center-align">Login</h3>
 
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel teal darken-3 z-depth-5">
                 <!-- Username input -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix white-text"></i>
+                        <i class="fas fa-user-alt prefix white-text"></i>
                         <input id="username" name="username" type="text" minlength="6" 
                         maxlength="12" pattern="^[a-zA-Z0-9]{6,12}$" class="validate" required>
                         <label for="username" class="white-text">Please enter a username - between 6 and 12 characters</label>
@@ -24,21 +24,21 @@
                         <label for="password" class="white-text">Please enter a password - between 6 and 12 characters</label>
                     </div>
                 </div>
-                <!-- Register button -->
+                <!-- Login button -->
                 <div class="row">
                     <button type="submit" class="col s4 offset-s4 btn-large grey darken-2">
-                        Register <i class="fas fa-sign-in-alt prefix white-text"></i>
+                        Login <i class="fas fa-sign-in-alt prefix white-text"></i>
                     </button>
                 </div>
             </div>
         </form>
     </div>
-  
+    
     <div class="row">
         <div class="col s12">
             <p class="center-align">
-                Already Registered? 
-                <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Login Here</a>
+                Not Registered? 
+                <a href="{{ url_for('register') }}" class="light-blue-text text-darken-4">Register Here</a>
             </p>
         </div>
     </div>
