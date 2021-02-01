@@ -3,16 +3,27 @@
 
     <img src="/static/assets/images/cars-hero.jpg" class="responsive-img" alt="cars image">
     
-    {% for review in reviews %}
-        {{ review.review }}<br>
-        {{ review.rating }}<br>
-    {% endfor %}
+    
+        
+        <br>
+    
     <div class="container">
     <ul class="collapsible popout">
+        {% for review in reviews %}
         <li>
-        <div class="collapsible-header white-text teal darken-3"><i class="fas fa-chevron-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header white-text teal darken-3">
+            <i class="fas fa-chevron-down"></i>
+            <strong>{{ review.make }}  {{ review.model }}  {{ review.year }}</strong> 
+        </div>
+        <div class="collapsible-body">
+            Make: {{ review.make }} <br>
+            Model: {{ review.model }} <br>
+            Make: {{ review.year }} <br>
+            Review: {{ review.review }} <br>
+            Rating: {{ review.rating }} / 5 <br>
+        </div>
         </li>
+        {% endfor %}
     </ul>
     </div>
 {% endblock %}
