@@ -8,9 +8,14 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <select id="make" name="make" class="validate" required>
-                            <option value="" disabled selected>Choose a make</option>
-                            {% for make in makes %}
-                                <option value="{{ make.make }}">{{ make.make }}</option>
+                            <option value="" disabled>Choose a make</option>
+                            <!-- Check if make in review collection is the same as make in makes collction -->
+                            {% for make in makes %} 
+                                {% if make.make == review.make %}
+                                    <option value="{{ make.make }}" selected>{{ make.make }}</option>
+                                {% else %}
+                                    <option value="{{ make.make }}">{{ make.make }}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                         <label for="make">Make</label>
@@ -19,36 +24,46 @@
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
                         <input id="model" name="model" minlength="1" maxlength="50"
-                        type="text" class="validate" required>
+                        type="text" class="validate" value="{{ review.model }}" required>
                         <label for="model">Model</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="year" name="year" minlength="4" maxlength="4" placeholder="YYYY"
-                        type="text" pattern="^[0-9]{4}$" class="validate" required>
+                        <input id="year" name="year" minlength="4" maxlength="4" 
+                        placeholder="YYYY" type="text" pattern="^[0-9]{4}$" 
+                        class="validate" value="{{ review.year }}" required>
                         <label for="year">Year</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="review" name="review" minlength="5"
-                        mexlength="200" class="materialize-textarea validate" required></textarea>
+                        mexlength="200" class="materialize-textarea validate"
+                         required>{{- review.review -}}</textarea>
                         <label for="review">Review</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
                         <input id="rating" name="rating" minlength="1" maxlength="1"
-                        type="text" class="validate" required>
+                        type="text" class="validate" value="{{ review.rating }}" 
+                        required>
                         <label for="rating">Rating</label>
                     </div>
                 </div>
-                <!-- Submit button -->
+              
                 <div class="row">
-                    <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
+                    <div class="col 12 center-align">
+                          <!-- Submit button -->
+                        <button type="submit" class="btn-large teal darken-2 center-align">
                         Save <i class="fas fa-sign-in-alt prefix"></i>
-                    </button>
+                        </button>
+                          <!-- Cancel button -->
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large teal darken-2 center-align">
+                            Cancel
+                        </a>
+                    </div>    
                 </div>
             </form>
         </div>

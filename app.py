@@ -121,7 +121,7 @@ def add_review():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
-    review = mongo.db.tasks.find_one({"_id": ObjectId(review_id)})
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     makes = mongo.db.makes.find().sort("make", 1)
     return render_template("edit_review.html", review=review, makes=makes)
 
