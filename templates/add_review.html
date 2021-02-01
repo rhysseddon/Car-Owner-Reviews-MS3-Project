@@ -7,8 +7,12 @@
             <form class="col s12"  method="POST" action="">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="make" name="make" minlength="2" maxlength="20"
-                        type="text" class="validate" required>
+                        <select id="make" name="make" class="validate" required>
+                            <option value="" disabled selected>Choose your option</option>
+                            {% for make in makes %}
+                                <option value="{{ make.make }}">{{ make.make }}</option>
+                            {% endfor %}
+                        </select>
                         <label for="make">Make</label>
                     </div>
                 </div>
