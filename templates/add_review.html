@@ -4,7 +4,7 @@
     <h3 class="center-align">New Review</h3>
     <div class="container">
         <div class="row card-panel grey lighten-5">
-            <form class="col s12"  method="POST" action="">
+            <form class="col s12"  method="POST" action="{{ url_for('add_review') }}">
                 <div class="row">
                     <div class="input-field col s12">
                         <select id="make" name="make" class="validate" required>
@@ -44,7 +44,12 @@
                         <label for="rating">Rating</label>
                     </div>
                 </div>
-               
+                <!-- Submit button -->
+                <div class="row">
+                    <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
+                        Save <i class="fas fa-sign-in-alt prefix"></i>
+                    </button>
+                </div>
             </form>
         </div>
     </div>

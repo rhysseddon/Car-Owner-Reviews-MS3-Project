@@ -13,11 +13,12 @@
             <strong>{{ review.make }}  {{ review.model }}  {{ review.year }}</strong> 
         </div>
         <div class="collapsible-body">
-            Make: {{ review.make }} <br>
-            Model: {{ review.model }} <br>
-            Make: {{ review.year }} <br>
-            Review: {{ review.review }} <br>
-            Rating: {{ review.rating }} / 5 <br>
+            <p> Make: {{ review.make }}</p> <br>
+            <p>Model: {{ review.model }}</p> <br>
+            <p>Make: {{ review.year }}</p> <br>
+            <p>Review: {{ review.review }}</p> <br>
+            <p>Rating: {{ review.rating }} / 5</p> <br>
+            <p><em>Owner: {{ review.owner }}</em></p>
         </div>
         </li>
         {% endfor %}
