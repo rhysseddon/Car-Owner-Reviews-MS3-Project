@@ -14,6 +14,16 @@ body, button {
     font-family: 'Faster One', cursive;
 }
 
+/* Styles accordion buttons */
+.btn-small {
+    margin: 5px;
+}
+
+/* Styles accordion titles */
+.collapsible-header .col strong {
+    margin: 10px;
+    line-height: 35px;;
+}
 /* Mobile view */
 @media (max-width: 500px) {
 nav .brand-logo {
