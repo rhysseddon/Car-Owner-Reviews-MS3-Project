@@ -13,11 +13,9 @@
             <div class="col s3">
                 <i class="fas fa-chevron-down"></i>
                 <strong>{{ review.make }}  {{ review.model }}  {{ review.year }}</strong>
-                <a href="" class="btn-small grey darken-2">Edit</a>
+                <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small grey darken-2">Edit</a>
                 <a href="" class="btn-small red darken-2">Delete</a>
             </div>
-            
-             
         </div>
         <div class="collapsible-body">
             <p> Make: {{ review.make }}</p> <br>

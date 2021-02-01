@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Edit Review</h3>
+    <div class="container">
+        <div class="row card-panel grey lighten-5">
+            <form class="col s12"  method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="make" name="make" class="validate" required>
+                            <option value="" disabled selected>Choose a make</option>
+                            {% for make in makes %}
+                                <option value="{{ make.make }}">{{ make.make }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="make">Make</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" method="POST" action="">
+                        <input id="model" name="model" minlength="1" maxlength="50"
+                        type="text" class="validate" required>
+                        <label for="model">Model</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" method="POST" action="">
+                        <input id="year" name="year" minlength="4" maxlength="4" placeholder="YYYY"
+                        type="text" pattern="^[0-9]{4}$" class="validate" required>
+                        <label for="year">Year</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="review" name="review" minlength="5"
+                        mexlength="200" class="materialize-textarea validate" required></textarea>
+                        <label for="review">Review</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" method="POST" action="">
+                        <input id="rating" name="rating" minlength="1" maxlength="1"
+                        type="text" class="validate" required>
+                        <label for="rating">Rating</label>
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="row">
+                    <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
+                        Save <i class="fas fa-sign-in-alt prefix"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
