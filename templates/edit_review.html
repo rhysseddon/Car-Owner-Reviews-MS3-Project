@@ -52,20 +52,22 @@
                         <label for="rating">Rating</label>
                     </div>
                 </div>
-              
                 <div class="row">
-                    <div class="col 12 center-align">
-                          <!-- Submit button -->
-                        <button type="submit" class="btn-large teal darken-2 center-align">
-                        Save <i class="fas fa-sign-in-alt prefix"></i>
+                    <div class="col s12 center-align">
+                        <!-- Cancel button -->
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large teal darken-2">
+                            Cancel <i class="fas fa-times-circle"></i>
+                        </a>  
+                        <!-- Submit button -->
+                        <button type="submit" class="btn-large teal darken-2">
+                        Save <i class="fas fa-sign-in-alt"></i>
                         </button>
-                          <!-- Cancel button -->
-                        <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large teal darken-2 center-align">
-                            Cancel
-                        </a>
-                    </div>    
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 {% endblock %}
+                                
+                    
+                        
