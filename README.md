@@ -122,7 +122,7 @@ to keep a consistent and clean UX.
 <summary>Desktop Profile (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-profile.png)
+![Image](static/assets/wireframes/desktop-profile.png)
 </p>
 </details>
 
@@ -130,7 +130,7 @@ to keep a consistent and clean UX.
 <summary>Desktop New Review (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-new-review.png)
+![Image](static/assets/wireframes/desktop-new-review.png)
 </p>
 </details>
 
@@ -138,7 +138,7 @@ to keep a consistent and clean UX.
 <summary>Desktop Login (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-login.png)
+![Image](static/assets/wireframes/desktop-login.png)
 </p>
 </details>
 
@@ -146,7 +146,7 @@ to keep a consistent and clean UX.
 <summary>Desktop Register (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-register.png)
+![Image](static/assets/wireframes/desktop-register.png)
 </p>
 </details>
 
@@ -154,7 +154,7 @@ to keep a consistent and clean UX.
 <summary>Desktop Edit Review (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-edit-review.png)
+![Image](static/assets/wireframes/desktop-edit-review.png)
 </p>
 </details>
 
@@ -162,7 +162,7 @@ to keep a consistent and clean UX.
 <summary>Desktop Manage Reviews (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-manage-reviews.png)
+![Image](static/assets/wireframes/desktop-manage-reviews.png)
 </p>
 </details>
 
@@ -172,7 +172,7 @@ to keep a consistent and clean UX.
 <summary>Tablet Home (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-home.png)
+![Image](static/assets/wireframes/tablet-home.png)
 </p>
 </details>
 
@@ -180,7 +180,7 @@ to keep a consistent and clean UX.
 <summary>Tablet Profile (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-profile.png)
+![Image](static/assets/wireframes/tablet-profile.png)
 </p>
 </details>
 
@@ -188,7 +188,7 @@ to keep a consistent and clean UX.
 <summary>Tablet New Review (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-new-review.png)
+![Image](static/assets/wireframes/tablet-new-review.png)
 </p>
 </details>
 
@@ -196,7 +196,7 @@ to keep a consistent and clean UX.
 <summary>Tablet Login (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-login.png)
+![Image](static/assets/wireframes/tablet-login.png)
 </p>
 </details>
 
@@ -204,7 +204,7 @@ to keep a consistent and clean UX.
 <summary>Tablet Register (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-register.png)
+![Image](static/assets/wireframes/tablet-register.png)
 </p>
 </details>
 
@@ -212,7 +212,7 @@ to keep a consistent and clean UX.
 <summary>Tablet Edit Review (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-edit-review.png)
+![Image](static/assets/wireframes/tablet-edit-review.png)
 </p>
 </details>
 
@@ -220,7 +220,7 @@ to keep a consistent and clean UX.
 <summary>Tablet Manage Reviews (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/tablet-manage-reviews.png)
+![Image](static/assets/wireframes/tablet-manage-reviews.png)
 </p>
 </details>
 
@@ -230,7 +230,7 @@ to keep a consistent and clean UX.
 <summary>Mobile Home (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-home.png)
+![Image](static/assets/wireframes/mobile-home.png)
 </p>
 </details>
 
@@ -238,7 +238,7 @@ to keep a consistent and clean UX.
 <summary>Mobile Profile (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-profile.png)
+![Image](static/assets/wireframes/mobile-profile.png)
 </p>
 </details>
 
@@ -246,7 +246,7 @@ to keep a consistent and clean UX.
 <summary>Mobile New Review (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-new-review.png)
+![Image](static/assets/wireframes/mobile-new-review.png)
 </p>
 </details>
 
@@ -254,7 +254,7 @@ to keep a consistent and clean UX.
 <summary>Mobile Login (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-login.png)
+![Image](static/assets/wireframes/mobile-login.png)
 </p>
 </details>
 
@@ -262,7 +262,7 @@ to keep a consistent and clean UX.
 <summary>Mobile Register (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-register.png)
+![Image](static/assets/wireframes/mobile-register.png)
 </p>
 </details>
 
@@ -270,7 +270,7 @@ to keep a consistent and clean UX.
 <summary>Mobile Edit Review (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-edit-review.png)
+![Image](static/assets/wireframes/mobile-edit-review.png)
 </p>
 </details>
 
@@ -278,7 +278,7 @@ to keep a consistent and clean UX.
 <summary>Mobile Manage Reviews (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/mobile-manage-reviews.png)
+![Image](static/assets/wireframes/mobile-manage-reviews.png)
 </p>
 </details>
 
