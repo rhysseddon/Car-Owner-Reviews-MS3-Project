@@ -114,7 +114,7 @@ to keep a consistent and clean UX.
 <summary>Desktop Home (Click for image)</summary>
 <p align="center">
 
-![Image](assets/wireframes/desktop-home.png)
+![Image](static/assets/wireframes/desktop-home.png)
 </p>
 </details>
 

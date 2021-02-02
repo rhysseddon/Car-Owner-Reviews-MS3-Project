@@ -122,17 +122,31 @@ def add_review():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
-        edited = {
-            "make": request.form.get("make"),
-            "model": request.form.get("model"),
-            "year": request.form.get("year"),
-            "review": request.form.get("review"),
-            "rating": request.form.get("rating"),
-            "owner": session["user"]
-        }
+        if session["user"] == "admin":
+            edited = {
+                "make": request.form.get("make"),
+                "model": request.form.get("model"),
+                "year": request.form.get("year"),
+                "review": request.form.get("review"),
+                "rating": request.form.get("rating"),
+                "owner": request.form.get("owner")
+            }
+        else:
+            edited = {
+                "make": request.form.get("make"),
+                "model": request.form.get("model"),
+                "year": request.form.get("year"),
+                "review": request.form.get("review"),
+                "rating": request.form.get("rating"),
+                "owner": session["user"]
+            }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, edited)
         flash("Review Successfully Edited")
-        return redirect(url_for("profile", username=session["user"]))
+        if session["user"] == "admin":
+            return redirect(url_for(
+                "get_makes", username=session["user"]))
+        else:
+            return redirect(url_for("profile", username=session["user"]))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     makes = mongo.db.makes.find().sort("make", 1)
@@ -143,7 +157,18 @@ def edit_review(review_id):
 def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
-    return redirect(url_for("profile", username=session["user"]))
+    if session["user"] == "admin":
+        return redirect(url_for(
+            "get_makes", username=session["user"]))
+    else:
+        return redirect(url_for("profile", username=session["user"]))
+
+
+@app.route("/get_makes")
+def get_makes():
+    makes = list(mongo.db.makes.find().sort("makes", 1))
+    reviews = list(mongo.db.reviews.find())
+    return render_template("manage_reviews.html", makes=makes, reviews=reviews)
 
 
 if __name__ == "__main__":

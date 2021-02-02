@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Manage Reviews</h3>
+    <div class="container">   
+        <ul class="collapsible popout">
+            {% for review in reviews %}
+                <li>
+                    <div class="collapsible-header white-text teal darken-3">
+                        <div class="col s3">
+                            <i class="fas fa-chevron-down"></i>
+                            <strong>{{ review.make }} {{ review.model }} {{ review.year }}</strong>
+                            <a href="{{ url_for('edit_review', review_id=review._id) }}"
+                                class="btn-small grey darken-2">Edit</a>
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}" 
+                                class="btn-small red darken-2">Delete</a>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <p> Make: {{ review.make }}</p> <br>
+                        <p>Model: {{ review.model }}</p> <br>
+                        <p>Make: {{ review.year }}</p> <br>
+                        <p>Review: {{ review.review }}</p> <br>
+                        <p>Rating: {{ review.rating }} / 5</p> <br>
+                        <p><em>Owner: {{ review.owner }}</em></p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
