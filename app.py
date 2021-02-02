@@ -25,6 +25,13 @@ def get_reviews():
     return render_template("home.html", reviews=reviews)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+    return render_template("home.html", reviews=reviews)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -144,7 +151,7 @@ def edit_review(review_id):
         flash("Review Successfully Edited")
         if session["user"] == "admin":
             return redirect(url_for(
-                "get_makes", username=session["user"]))
+                "get_manage", username=session["user"]))
         else:
             return redirect(url_for("profile", username=session["user"]))
 
@@ -159,16 +166,15 @@ def delete_review(review_id):
     flash("Review Successfully Deleted")
     if session["user"] == "admin":
         return redirect(url_for(
-            "get_makes", username=session["user"]))
+            "get_manage", username=session["user"]))
     else:
         return redirect(url_for("profile", username=session["user"]))
 
 
-@app.route("/get_makes")
-def get_makes():
-    makes = list(mongo.db.makes.find().sort("makes", 1))
+@app.route("/get_manage")
+def get_manage():
     reviews = list(mongo.db.reviews.find())
-    return render_template("manage_reviews.html", makes=makes, reviews=reviews)
+    return render_template("manage_reviews.html", reviews=reviews)
 
 
 if __name__ == "__main__":

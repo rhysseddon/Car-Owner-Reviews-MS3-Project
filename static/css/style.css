@@ -1,4 +1,14 @@
 
+.welcome {
+    height: 250px;
+}
+.home-search {
+    height: 250px;
+}
+.search-bar{
+    padding-left: 12%;
+    padding-top: 10vh;
+}
 nav, h1, h2, h3, h4 {
     font-family: 'Faster One', cursive;
     letter-spacing: 2px;

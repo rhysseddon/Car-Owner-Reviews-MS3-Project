@@ -5,6 +5,7 @@
     {{ username }}'s Profile
     </h3>
     <div class="container">
+        <h4>Your Reviews</h4>
         <ul class="collapsible popout">
             {% for review in reviews %}
                 {% if session.user|lower == review.owner|lower %}
