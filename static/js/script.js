@@ -2,7 +2,7 @@
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
     $('select').formSelect();
-    $('.modal').modal();
+    $('.modal').modal(); 
     /**
      * This function validates the choose make input on the new review form,
      * If the input is not filled in correctly the input will turn red,

@@ -2,9 +2,10 @@
 {% block content %}
 
     <h3 class="center-align">New Review</h3>
+    <!-- New review form -->
     <div class="container">
         <div class="row card-panel grey lighten-5">
-            <form class="col s12"  method="POST" action="{{ url_for('add_review') }}">
+            <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
                 <div class="row">
                     <div class="input-field col s12">
                         <select id="make" name="make" class="validate" required>
@@ -18,29 +19,28 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="model" name="model" minlength="1" maxlength="50"
-                        type="text" class="validate" required>
+                        <input id="model" name="model" minlength="1" maxlength="50" type="text" class="validate" required>
                         <label for="model">Model</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="year" name="year" minlength="4" maxlength="4" placeholder="YYYY"
-                        type="text" pattern="^[0-9]{4}$" class="validate" required>
+                        <input id="year" name="year" minlength="4" maxlength="4" placeholder="YYYY" type="text"
+                            pattern="^[0-9]{4}$" class="validate" required>
                         <label for="year">Year</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="review" name="review" minlength="5"
-                        mexlength="200" class="materialize-textarea validate" required></textarea>
+                        <textarea id="review" name="review" minlength="5" mexlength="200"
+                            class="materialize-textarea validate" required></textarea>
                         <label for="review">Review</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="rating" name="rating" minlength="1" maxlength="1"
-                        type="text" class="validate" required>
+                        <input id="rating" name="rating" minlength="1" maxlength="1" type="text" 
+                        class="validate" required>
                         <label for="rating">Rating</label>
                     </div>
                 </div>

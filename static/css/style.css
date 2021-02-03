@@ -1,38 +1,45 @@
-.welcome {
-    height: 250px;
-}
-.home-search {
-    height: 250px;
-}
-.search-bar{
-    padding-left: 12%;
-    padding-top: 10vh;
+/* Styles all body main text and buttons */
+body, button {
+    font-family: 'Contrail One', cursive;
 }
 
-.admin-search-bar{
-    padding-left: 33%;
-    padding-top: 15vh;
-}
-
-
+/* Styles all nav and heading titles */
 nav, h1, h2, h3, h4 {
     font-family: 'Faster One', cursive;
     letter-spacing: 2px;
 }
 
-body, button {
-    font-family: 'Contrail One', cursive;
-    
+/* Styles all small buttons */
+.btn-small {
+    margin: 5px;
 }
 
+/* Styles links on navbar  */
+.nav-links li a {
+    font-size: 1.2rem;
+}
+
+/* Styles all flash messages */
 .flash-messages h4 {
     line-height: 2;
     font-family: 'Faster One', cursive;
 }
 
-/* Styles accordion buttons */
-.btn-small {
-    margin: 5px;
+/* Styles search and welcome section on home page */
+.home-search, .welcome {
+    height: 250px;
+}
+
+/* Styles search bar on home page */
+.search-bar{
+    padding-left: 12%;
+    padding-top: 10vh;
+}
+
+/* Styles search bar on manage reviews page */
+.admin-search-bar{
+    padding-left: 33%;
+    padding-top: 15vh;
 }
 
 /* Styles accordion titles */
@@ -40,6 +47,7 @@ body, button {
     margin: 10px;
     line-height: 35px;;
 }
+
 /* Creates a sticky footer  */
 body {
     display: flex;
@@ -48,13 +56,17 @@ body {
   }
 main {
     flex: 1 0 auto;
-  }
+}
 
+/* Styles the footer */
 .footer {
+ margin-top: 20px;   
  height: auto;
  background-color: rgba(0, 0, 0, 0.2);
 
 }
+
+/* Styles the footer links */
 .social {
     font-size: 30px;
     margin-top: 2%;
@@ -62,8 +74,10 @@ main {
 .insta {
     color: #e1306c;;
 }
+
 /* Mobile view */
 @media (max-width: 500px) {
+/* Styles brand logo in mobile view */
 nav .brand-logo {
 font-size: 1.3rem;
 }

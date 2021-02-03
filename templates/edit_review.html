@@ -2,20 +2,21 @@
 {% block content %}
 
     <h3 class="center-align">Edit Review</h3>
+    <!-- Edit review form -->
     <div class="container">
         <div class="row card-panel grey lighten-5">
-            <form class="col s12"  method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
+            <form class="col s12" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
                 <div class="row">
                     <div class="input-field col s12">
                         <select id="make" name="make" class="validate" required>
                             <option value="" disabled>Choose a make</option>
                             <!-- Check if make in review collection is the same as make in makes collction -->
-                            {% for make in makes %} 
-                                {% if make.make == review.make %}
-                                    <option value="{{ make.make }}" selected>{{ make.make }}</option>
-                                {% else %}
-                                    <option value="{{ make.make }}">{{ make.make }}</option>
-                                {% endif %}
+                            {% for make in makes %}
+                            {% if make.make == review.make %}
+                            <option value="{{ make.make }}" selected>{{ make.make }}</option>
+                            {% else %}
+                            <option value="{{ make.make }}">{{ make.make }}</option>
+                            {% endif %}
                             {% endfor %}
                         </select>
                         <label for="make">Make</label>
@@ -23,52 +24,48 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="model" name="model" minlength="1" maxlength="50"
-                        type="text" class="validate" value="{{ review.model }}" required>
+                        <input id="model" name="model" minlength="1" maxlength="50" type="text" class="validate"
+                            value="{{ review.model }}" required>
                         <label for="model">Model</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="year" name="year" minlength="4" maxlength="4" 
-                        placeholder="YYYY" type="text" pattern="^[0-9]{4}$" 
-                        class="validate" value="{{ review.year }}" required>
+                        <input id="year" name="year" minlength="4" maxlength="4" placeholder="YYYY" type="text"
+                            pattern="^[0-9]{4}$" class="validate" value="{{ review.year }}" required>
                         <label for="year">Year</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="review" name="review" minlength="5"
-                        mexlength="200" class="materialize-textarea validate"
-                         required>{{- review.review -}}</textarea>
+                        <textarea id="review" name="review" minlength="5" mexlength="200"
+                            class="materialize-textarea validate" required>{{- review.review -}}</textarea>
                         <label for="review">Review</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="rating" name="rating" minlength="1" maxlength="1"
-                        type="text" class="validate" value="{{ review.rating }}" 
-                        required>
+                        <input id="rating" name="rating" minlength="1" maxlength="1" type="text" class="validate"
+                            value="{{ review.rating }}" required>
                         <label for="rating">Rating</label>
                     </div>
                 </div>
+                <!-- Hidden input for admin editing to get owner -->
                 <input type="hidden" id="owner" name="owner" value="{{ review.owner }}">
                 <div class="row">
                     <div class="col s12 center-align">
                         <!-- Cancel button -->
                         <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large teal darken-2">
                             Cancel <i class="fas fa-times-circle"></i>
-                        </a>  
+                        </a>
                         <!-- Submit button -->
                         <button type="submit" class="btn-large teal darken-2">
-                        Save <i class="fas fa-sign-in-alt"></i>
+                            Save <i class="fas fa-sign-in-alt"></i>
                         </button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
 {% endblock %}
-                                
-                    
-                        

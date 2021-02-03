@@ -21,12 +21,21 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_reviews")
 def get_reviews():
+    """
+    This function finds the reviews on mongo db adds to a list
+    and display them in accordion on homepage.
+    """
     reviews = list(mongo.db.reviews.find())
     return render_template("home.html", reviews=reviews)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    This function does a text search for make and model in the
+    db. If admin searches on manage reviews page the results will
+    display on manage reviews page, if not they display on home page.    
+    """
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
     if session["user"] == "admin":  # And on manage reviews page??
@@ -37,6 +46,11 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    This function checks for existing user in the db,
+    saves username and password and put the new user into
+    session cookie.
+    """
     if request.method == "POST":
         # Check if the username exists in the database
         existing_user = mongo.db.users.find_one(
@@ -62,6 +76,10 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    This function checks username and password are correct
+    and logs in user.
+    """
     if request.method == "POST":
         # check for username in db
         existing_user = mongo.db.users.find_one(
@@ -91,7 +109,10 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # get session users username from db
+    """
+    This function gets session user and their reviews from db
+    and renders to the users profile page
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     reviews = list(mongo.db.reviews.find())
@@ -112,6 +133,10 @@ def logout():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    """
+    This function upon a saving a review creates a
+    dictionary and saves to db.
+    """
     if request.method == "POST":
         review = {
             "make": request.form.get("make"),
@@ -131,6 +156,13 @@ def add_review():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    """
+    When an edited review is saved this function adds
+    the edited data to the db and redirects to profile
+    page, if its an admin edit on manage reviews page
+    the owner will not be edited and will redirect to
+    manage reviews page.
+    """
     if request.method == "POST":
         if session["user"] == "admin":
             edited = {
@@ -165,6 +197,11 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    """
+    This function will delete selected review from db and redirect
+    to profile page. If user is admin it will redirect to manage
+    reviews page.
+    """
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     if session["user"] == "admin":
@@ -176,6 +213,10 @@ def delete_review(review_id):
 
 @app.route("/get_manage")
 def get_manage():
+    """
+    This function will find reviews in db and render to
+    manage reviews page.
+    """
     reviews = list(mongo.db.reviews.find())
     return render_template("manage_reviews.html", reviews=reviews)
 
