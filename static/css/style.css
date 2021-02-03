@@ -36,7 +36,7 @@ nav, h1, h2, h3, h4 {
     padding-top: 10vh;
 }
 
-/* Styles search bar on manage reviews page */
+/* Styles search bar on manage reviews page */ 
 .admin-search-bar{
     padding-left: 33%;
     padding-top: 15vh;
@@ -46,6 +46,11 @@ nav, h1, h2, h3, h4 {
 .collapsible-header .col strong {
     margin: 10px;
     line-height: 35px;;
+}
+
+/* Styles reviews heading on profile page */
+.your-revs-heading {
+    padding-bottom: 5vh;
 }
 
 /* Creates a sticky footer  */
@@ -63,7 +68,10 @@ main {
  margin-top: 20px;   
  height: auto;
  background-color: rgba(0, 0, 0, 0.2);
+}
 
+footer .row {
+    margin-bottom: 0;
 }
 
 /* Styles the footer links */
@@ -81,4 +89,17 @@ main {
 nav .brand-logo {
 font-size: 1.3rem;
 }
+
+/* Styles search bar on home page mobile */
+.search-bar {
+    padding-left: 8%;
+    padding-top: 10vh;
 }
+
+/* Styles search bar on manage reviews page moblie */
+.admin-search-bar {
+    padding-left: 10%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+

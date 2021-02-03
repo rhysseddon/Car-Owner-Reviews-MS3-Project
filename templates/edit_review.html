@@ -24,7 +24,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="model" name="model" minlength="1" maxlength="50" type="text" class="validate"
+                        <input id="model" name="model" minlength="1" maxlength="20" type="text" class="validate"
                             value="{{ review.model }}" required>
                         <label for="model">Model</label>
                     </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="review" name="review" minlength="5" mexlength="200"
+                        <textarea id="review" name="review" minlength="5" maxlength="200"
                             class="materialize-textarea validate" required>{{- review.review -}}</textarea>
                         <label for="review">Review</label>
                     </div>
