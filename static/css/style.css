@@ -1,4 +1,3 @@
-
 .welcome {
     height: 250px;
 }
@@ -9,6 +8,13 @@
     padding-left: 12%;
     padding-top: 10vh;
 }
+
+.admin-search-bar{
+    padding-left: 33%;
+    padding-top: 15vh;
+}
+
+
 nav, h1, h2, h3, h4 {
     font-family: 'Faster One', cursive;
     letter-spacing: 2px;
@@ -33,6 +39,28 @@ body, button {
 .collapsible-header .col strong {
     margin: 10px;
     line-height: 35px;;
+}
+/* Creates a sticky footer  */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+main {
+    flex: 1 0 auto;
+  }
+
+.footer {
+ height: auto;
+ background-color: rgba(0, 0, 0, 0.2);
+
+}
+.social {
+    font-size: 30px;
+    margin-top: 2%;
+}
+.insta {
+    color: #e1306c;;
 }
 /* Mobile view */
 @media (max-width: 500px) {

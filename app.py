@@ -29,6 +29,9 @@ def get_reviews():
 def search():
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+    if session["user"] == "admin":  # And on manage reviews page??
+        return render_template("manage_reviews.html", reviews=reviews)
+
     return render_template("home.html", reviews=reviews)
 
 
