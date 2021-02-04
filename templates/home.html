@@ -39,7 +39,8 @@
         <h4 class="center-align">All Reviews</h4>
         <!-- All reviews accordion  -->
         <div class="container">
-            {% if reviews|length > 0 %}
+            <!-- If reviews search variable has a result  -->
+            {% if reviews|length > 0 %} 
             <ul class="collapsible popout">
                 {% for review in reviews %}
                 <li>
