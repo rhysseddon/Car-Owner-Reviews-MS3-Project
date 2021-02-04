@@ -15,4 +15,21 @@
             </div>
         
     </div>
+    <div class="row">
+        <form class="col s8 offset-s2" method="POST" action="{{ url_for('add_make') }}">
+                <div class="row">
+                <div class="input-field col s12" method="POST" action="">
+                    <input id="make" name="make" minlength="1" maxlength="15" type="text" 
+                    class="validate" required>
+                    <label for="rating">New Make</label>
+                </div>
+            </div>
+            <!-- Submit button -->
+            <div class="row">
+                <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
+                    Save <i class="fas fa-sign-in-alt prefix"></i>
+                </button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

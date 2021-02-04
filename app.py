@@ -216,6 +216,19 @@ def get_makes():
     return render_template("manage_makes.html", makes=makes)
 
 
+@app.route("/add_make", methods=["GET", "POST"])
+def add_make():
+    if request.method == "POST":
+        make = {
+            "make": request.form.get("make")
+        }
+        mongo.db.makes.insert_one(make)
+        flash("New Make Added")
+        return redirect(url_for("get_makes"))
+
+    return render_template("manage_makes.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
