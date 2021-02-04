@@ -1,3 +1,7 @@
+.prewrap {
+    white-space: pre-wrap;
+}
+
 /* Styles all body main text and buttons */
 body, button {
     font-family: 'Contrail One', cursive;
@@ -103,3 +107,4 @@ font-size: 1.3rem;
     padding-bottom: 5vh;
 }
 
+}

@@ -36,4 +36,8 @@
             }
         });
     }
+    // hide flash messages
+    setTimeout(function(){
+        $(".flash-message").fadeout('fast');
+    }, 3000); // 3 secs
 });

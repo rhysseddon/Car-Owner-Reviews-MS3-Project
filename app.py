@@ -25,7 +25,7 @@ def get_reviews():
     This function finds the reviews on mongo db adds to a list
     and display them in accordion on homepage.
     """
-    reviews = list(mongo.db.reviews.find())
+    reviews = list(mongo.db.reviews.find().sort("_id", -1))
     return render_template("home.html", reviews=reviews)
 
 
@@ -34,7 +34,7 @@ def search():
     """
     This function does a text search for make and model in the
     db. If admin searches on manage reviews page the results will
-    display on manage reviews page, if not they display on home page.    
+    display on manage reviews page, if not they display on home page.
     """
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
@@ -115,7 +115,7 @@ def profile(username):
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    reviews = list(mongo.db.reviews.find())
+    reviews = list(mongo.db.reviews.find().sort("_id", -1))
     if session["user"]:
         return render_template(
             "profile.html", username=username, reviews=reviews)
@@ -171,7 +171,7 @@ def edit_review(review_id):
                 "year": request.form.get("year"),
                 "review": request.form.get("review"),
                 "rating": request.form.get("rating"),
-                "owner": request.form.get("owner")
+                "owner": request.form.get("owner")  # find owner from db?? mongo.db.reviews.find_one({"owner": ObjectId(review_id)})
             }
         else:
             edited = {
@@ -217,7 +217,7 @@ def get_manage():
     This function will find reviews in db and render to
     manage reviews page.
     """
-    reviews = list(mongo.db.reviews.find())
+    reviews = list(mongo.db.reviews.find().sort("_id", -1))
     return render_template("manage_reviews.html", reviews=reviews)
 
 
