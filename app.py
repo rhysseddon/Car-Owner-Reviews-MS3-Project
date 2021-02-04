@@ -38,8 +38,8 @@ def search():
     """
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-    if session["user"] == "admin":  # And on manage reviews page??
-        return render_template("manage_reviews.html", reviews=reviews)
+    # if session["user"] == "admin":  # And on manage reviews page??
+    #     return render_template("manage_reviews.html", reviews=reviews)
 
     return render_template("home.html", reviews=reviews)
 
@@ -181,7 +181,7 @@ def edit_review(review_id):
             flash("Review Successfully Edited")
             if session["user"] == "admin":
                 return redirect(url_for(
-                    "get_manage", username=session["user"]))
+                    "get_reviews", username=session["user"]))
             else:
                 return redirect(url_for("profile", username=session["user"]))
         makes = mongo.db.makes.find().sort("make", 1)
@@ -199,21 +199,21 @@ def delete_review(review_id):
     """
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
-    if session["user"] == "admin":
+    if session["user"] == "admin":  # needs to redirect to profile when admin deletes on profile
         return redirect(url_for(
-            "get_manage", username=session["user"]))
-    
+            "get_reviews", username=session["user"]))
+
     return redirect(url_for("profile", username=session["user"]))
 
 
-@app.route("/get_manage")
-def get_manage():
+@app.route("/get_makes")
+def get_makes():
     """
-    This function will find reviews in db and render to
-    manage reviews page.
+    This function will find makes in db and render to
+    manage makes page.
     """
-    reviews = list(mongo.db.reviews.find().sort("_id", -1))
-    return render_template("manage_reviews.html", reviews=reviews)
+    makes = list(mongo.db.makes.find().sort("make", 1))
+    return render_template("manage_makes.html", makes=makes)
 
 
 if __name__ == "__main__":

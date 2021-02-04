@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Manage Makes</h3>
+    <div class="row">
+        
+            <div class="input-field col s8 offset-s2">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    {% for make in makes %}
+                    <option value="1">{{ make.make }}</option>
+                    {% endfor %}
+                </select>
+                <label>Select Make</label>
+            </div>
+        
+    </div>
+{% endblock %}
