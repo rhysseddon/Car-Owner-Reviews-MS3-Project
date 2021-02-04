@@ -111,7 +111,7 @@ def login():
 def profile(username):
     """
     This function gets session user and their reviews from db
-    and renders to the users profile page
+    and renders to the users profile page.
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -163,36 +163,31 @@ def edit_review(review_id):
     the owner will not be edited and will redirect to
     manage reviews page.
     """
-    if request.method == "POST":
-        if session["user"] == "admin":
-            edited = {
-                "make": request.form.get("make"),
-                "model": request.form.get("model"),
-                "year": request.form.get("year"),
-                "review": request.form.get("review"),
-                "rating": request.form.get("rating"),
-                "owner": request.form.get("owner")  # find owner from db?? mongo.db.reviews.find_one({"owner": ObjectId(review_id)})
-            }
-        else:
-            edited = {
-                "make": request.form.get("make"),
-                "model": request.form.get("model"),
-                "year": request.form.get("year"),
-                "review": request.form.get("review"),
-                "rating": request.form.get("rating"),
-                "owner": session["user"]
-            }
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, edited)
-        flash("Review Successfully Edited")
-        if session["user"] == "admin":
-            return redirect(url_for(
-                "get_manage", username=session["user"]))
-        else:
-            return redirect(url_for("profile", username=session["user"]))
+    if "user" in session:
 
-    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    makes = mongo.db.makes.find().sort("make", 1)
-    return render_template("edit_review.html", review=review, makes=makes)
+        review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+        if not review:
+            return render_template("error.html")
+        if request.method == "POST":
+            edited = {
+                "make": request.form.get("make"),
+                "model": request.form.get("model"),
+                "year": request.form.get("year"),
+                "review": request.form.get("review"),
+                "rating": request.form.get("rating"),
+                "owner": review["owner"]
+                }
+            mongo.db.reviews.update({"_id": ObjectId(review_id)}, edited)
+            flash("Review Successfully Edited")
+            if session["user"] == "admin":
+                return redirect(url_for(
+                    "get_manage", username=session["user"]))
+            else:
+                return redirect(url_for("profile", username=session["user"]))
+        makes = mongo.db.makes.find().sort("make", 1)
+        return render_template("edit_review.html", review=review, makes=makes)
+    else:
+        return render_template("error.html")
 
 
 @app.route("/delete_review/<review_id>")
@@ -207,8 +202,8 @@ def delete_review(review_id):
     if session["user"] == "admin":
         return redirect(url_for(
             "get_manage", username=session["user"]))
-    else:
-        return redirect(url_for("profile", username=session["user"]))
+    
+    return redirect(url_for("profile", username=session["user"]))
 
 
 @app.route("/get_manage")
