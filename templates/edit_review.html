@@ -10,7 +10,7 @@
                     <div class="input-field col s12">
                         <select id="make" name="make" class="validate" required>
                             <option value="" disabled>Choose a make</option>
-                            <!-- Check if make in review collection is the same as make in makes collection -->
+                            <!-- Check if make in review collection is the same as make in makes collction -->
                             {% for make in makes %}
                             {% if make.make == review.make %}
                             <option value="{{ make.make }}" selected>{{ make.make }}</option>

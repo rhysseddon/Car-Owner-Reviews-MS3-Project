@@ -2,34 +2,46 @@
 {% block content %}
 
     <h3 class="center-align">Manage Makes</h3>
-    <div class="row">
-        
-            <div class="input-field col s8 offset-s2">
-                <select>
-                    <option value="" disabled selected>Choose your option</option>
-                    {% for make in makes %}
-                    <option value="1">{{ make.make }}</option>
-                    {% endfor %}
-                </select>
-                <label>Select Make</label>
-            </div>
-        
-    </div>
-    <div class="row">
-        <form class="col s8 offset-s2" method="POST" action="{{ url_for('add_make') }}">
-                <div class="row">
-                <div class="input-field col s12" method="POST" action="">
-                    <input id="make" name="make" minlength="1" maxlength="15" type="text" 
-                    class="validate" required>
-                    <label for="rating">New Make</label>
+    <div class="row container">
+            <h4>Edit Make</h4>
+            <form class="col s8 offset-s2" method="POST" action="">
+                <div class="input-field col s8 offset-s2">
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        {% for make in makes %}
+                        <option value="{{ make.make }}">{{ make.make }}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Select Make</label>
                 </div>
-            </div>
-            <!-- Submit button -->
-            <div class="row">
-                <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
-                    Save <i class="fas fa-sign-in-alt prefix"></i>
-                </button>
-            </div>
-        </form>
-    </div>
-{% endblock %}
+                <!-- Submit button -->
+                <div class="row">
+                    <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
+                         Edit <i class="fas fa-sign-in-alt prefix"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="row container">
+            <h4>Add New Make</h4>
+            <form class="col s8 offset-s2" method="POST" action="{{ url_for('add_make') }}">
+                
+                    <div class="row">
+                    <div class="input-field col s12" method="POST" action="">
+                        <input id="new_make" name="new_make" minlength="1" maxlength="15" type="text" 
+                        class="validate" required>
+                        <label for="new_make">New Make</label>
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="row">
+                    <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
+                        Save Make<i class="fas fa-sign-in-alt prefix"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    {% endblock %}
+            
+            
+        
