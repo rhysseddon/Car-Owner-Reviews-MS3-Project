@@ -94,15 +94,13 @@ def login():
                         request.form.get("username")))
                     return redirect(url_for(
                         "profile", username=session["user"]))
-            else:
 
-                flash("Incorrect Username and/or password")
-                return redirect(url_for("login"))
-
-        else:
-            # username doesnt exist
-            flash("Incorrect Username and/or Password")
+            flash("Incorrect Username and/or password")
             return redirect(url_for("login"))
+
+        # username doesnt exist
+        flash("Incorrect Username and/or Password")
+        return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -122,8 +120,8 @@ def profile(username):
                 "profile.html", username=username, reviews=reviews)
 
         return redirect(url_for("login"))
-    else:
-        return render_template("error.html")
+
+    return render_template("error.html")
 
 
 @app.route("/logout")
@@ -157,8 +155,8 @@ def add_review():
 
         makes = mongo.db.makes.find().sort("make", 1)
         return render_template("add_review.html", makes=makes)
-    else:
-        return render_template("error.html")
+
+    return render_template("error.html")
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -189,12 +187,12 @@ def edit_review(review_id):
             if session["user"] == "admin":
                 return redirect(url_for(
                     "get_reviews", username=session["user"]))
-            else:
-                return redirect(url_for("profile", username=session["user"]))
+
+            return redirect(url_for("profile", username=session["user"]))
         makes = mongo.db.makes.find().sort("make", 1)
         return render_template("edit_review.html", review=review, makes=makes)
-    else:
-        return render_template("error.html")
+
+    return render_template("error.html")
 
 
 @app.route("/delete_review/<review_id>")
@@ -222,8 +220,8 @@ def get_makes():
     if "user" in session:
         makes = list(mongo.db.makes.find().sort("make", 1))
         return render_template("manage_makes.html", makes=makes)
-    else:
-        return render_template("error.html")
+
+    return render_template("error.html")
 
 
 @app.route("/add_make", methods=["GET", "POST"])
@@ -238,8 +236,8 @@ def add_make():
             return redirect(url_for("get_makes"))
 
         return render_template("manage_makes.html")
-    else:
-        return render_template("error.html")
+
+    return render_template("error.html")
 
 
 @app.route("/edit_makes/<makes_id>", methods=["GET", "POST"])
@@ -254,8 +252,8 @@ def edit_makes(makes_id):
             return redirect(url_for("get_makes"))
         makes = mongo.db.makes.find_one({"_id": ObjectId(makes_id)})
         return render_template("edit_makes.html", makes=makes)
-    else:
-        return render_template("error.html")
+
+    return render_template("error.html")
 
 
 @app.route("/delete_makes/<makes_id>")
