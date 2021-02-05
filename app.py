@@ -95,7 +95,7 @@ def login():
                     return redirect(url_for(
                         "profile", username=session["user"]))
             else:
-                # invalid password
+
                 flash("Incorrect Username and/or password")
                 return redirect(url_for("login"))
 
@@ -113,14 +113,17 @@ def profile(username):
     This function gets session user and their reviews from db
     and renders to the users profile page.
     """
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    reviews = list(mongo.db.reviews.find().sort("_id", -1))
-    if session["user"]:
-        return render_template(
-            "profile.html", username=username, reviews=reviews)
+    if "user" in session:
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        reviews = list(mongo.db.reviews.find().sort("_id", -1))
+        if session["user"]:
+            return render_template(
+                "profile.html", username=username, reviews=reviews)
 
-    return redirect(url_for("login"))
+        return redirect(url_for("login"))
+    else:
+        return render_template("error.html")
 
 
 @app.route("/logout")
@@ -137,21 +140,25 @@ def add_review():
     This function upon a saving a review creates a
     dictionary and saves to db.
     """
-    if request.method == "POST":
-        review = {
-            "make": request.form.get("make"),
-            "model": request.form.get("model"),
-            "year": request.form.get("year"),
-            "review": request.form.get("review"),
-            "rating": request.form.get("rating"),
-            "owner": session["user"]
-        }
-        mongo.db.reviews.insert_one(review)
-        flash("Review Successfully Added")
-        return redirect(url_for("get_reviews"))
+    if "user" in session:
 
-    makes = mongo.db.makes.find().sort("make", 1)
-    return render_template("add_review.html", makes=makes)
+        if request.method == "POST":
+            review = {
+                "make": request.form.get("make"),
+                "model": request.form.get("model"),
+                "year": request.form.get("year"),
+                "review": request.form.get("review"),
+                "rating": request.form.get("rating"),
+                "owner": session["user"]
+            }
+            mongo.db.reviews.insert_one(review)
+            flash("Review Successfully Added")
+            return redirect(url_for("get_reviews"))
+
+        makes = mongo.db.makes.find().sort("make", 1)
+        return render_template("add_review.html", makes=makes)
+    else:
+        return render_template("error.html")
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -199,7 +206,7 @@ def delete_review(review_id):
     """
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
-    if session["user"] == "admin":  # needs to redirect to profile when admin deletes on profile
+    if session["user"] == "admin":  # needs to redirect to home when admin deletes on home
         return redirect(url_for(
             "get_reviews", username=session["user"]))
 
@@ -212,34 +219,50 @@ def get_makes():
     This function will find makes in db and render to
     manage makes page.
     """
-    makes = list(mongo.db.makes.find().sort("make", 1))
-    return render_template("manage_makes.html", makes=makes)
+    if "user" in session:
+        makes = list(mongo.db.makes.find().sort("make", 1))
+        return render_template("manage_makes.html", makes=makes)
+    else:
+        return render_template("error.html")
 
 
 @app.route("/add_make", methods=["GET", "POST"])
 def add_make():
-    if request.method == "POST":
-        make = {
-            "make": request.form.get("new_make")
-        }
-        mongo.db.makes.insert_one(make)
-        flash("New Make Added")
-        return redirect(url_for("get_makes"))
+    if "user" in session:
+        if request.method == "POST":
+            make = {
+                "make": request.form.get("new_make")
+            }
+            mongo.db.makes.insert_one(make)
+            flash("New Make Added")
+            return redirect(url_for("get_makes"))
 
-    return render_template("manage_makes.html")
+        return render_template("manage_makes.html")
+    else:
+        return render_template("error.html")
 
 
 @app.route("/edit_makes/<makes_id>", methods=["GET", "POST"])
 def edit_makes(makes_id):
-    if request.method == "POST":
-        edited = {
-            "make": request.form.get("make")
-        }
-        mongo.db.makes.update({"_id": ObjectId(makes_id)}, edited)
-        flash("Make Successfully Edited")
-        return redirect(url_for("get_makes"))
-    makes = mongo.db.makes.find_one({"_id": ObjectId(makes_id)})
-    return render_template("edit_makes.html", makes=makes)
+    if "user" in session:
+        if request.method == "POST":
+            edited = {
+                "make": request.form.get("make")
+            }
+            mongo.db.makes.update({"_id": ObjectId(makes_id)}, edited)
+            flash("Make Successfully Edited")
+            return redirect(url_for("get_makes"))
+        makes = mongo.db.makes.find_one({"_id": ObjectId(makes_id)})
+        return render_template("edit_makes.html", makes=makes)
+    else:
+        return render_template("error.html")
+
+
+@app.route("/delete_makes/<makes_id>")
+def delete_makes(makes_id):
+    mongo.db.makes.remove({"_id": ObjectId(makes_id)})
+    flash("Make Successfully deleted")
+    return redirect(url_for("get_makes"))
 
 
 if __name__ == "__main__":
