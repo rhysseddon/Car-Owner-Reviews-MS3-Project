@@ -1,7 +1,3 @@
-.prewrap {
-    white-space: pre-wrap;
-}
-
 /* Styles all body main text and buttons */
 body, button {
     font-family: 'Contrail One', cursive;
@@ -30,21 +26,15 @@ nav, h1, h2, h3, h4 {
 }
 
 /* Styles search and welcome section on home page */
-.home-search, .welcome {
-    height: 250px;
+.welcome {
+    height: 220px;
 }
 
 /* Styles search bar on home page */
-.search-bar{
-    padding-left: 12%;
-    padding-top: 10vh;
+.search-bar {
+    padding-left: 11vw;
 }
 
-/* Styles search bar on manage reviews page */ 
-.admin-search-bar{
-    padding-left: 33%;
-    padding-top: 15vh;
-}
 
 /* Styles accordion titles */
 .collapsible-header .col strong {
@@ -93,18 +83,4 @@ footer .row {
 nav .brand-logo {
 font-size: 1.3rem;
 }
-
-/* Styles search bar on home page mobile */
-.search-bar {
-    padding-left: 8%;
-    padding-top: 10vh;
-}
-
-/* Styles search bar on manage reviews page moblie */
-.admin-search-bar {
-    padding-left: 10%;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-}
-
 }

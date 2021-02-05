@@ -4,9 +4,9 @@
     <img src="/static/assets/images/cars-hero.jpg" class="responsive-img" alt="cars image">
     
     <section>
-        <div class="row">
+        <div class="row welcome ">
             <!-- Welcome Section -->
-            <div class="col s12 m6 welcome center-align">
+            <div class="col s12 m6 center-align welcome">
                 <h4 class="center-align">Welcome</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ex?
                     Itaque deserunt impedit recusandae accusamus ipsam labore explicabo dignissimos expedita?</p>
@@ -17,19 +17,19 @@
             </div>
 
             <!--Search Section  -->
-            <div class="col s12 m6 home-search center-align">
+            <div class="col s12 m6 valign-wrapper welcome">
                 <form action="{{ url_for('search') }}" method="POST">
-                    <div class="row valign-wrapper center-align search-bar">
-                        <div class="input-field col 12">
+                    <div class="valign-wrapper center-align search-bar">
+                        <div class="input-field">
                             <i class="fas fa-search prefix"></i>
                             <input type="text" name="query" id="query" minlength="3" class="validate" required>
                             <label for="query">Search Make or Model</label>
                         </div>
-                        <div class="col 12">
+                        <div class="">
                             <button type="submit" class="btn-small teal darken-2">
                                 <i class="fas fa-search"></i> Search </button>
                             <a href="{{ url_for('get_reviews') }}" class="btn-small teal darken-2">Reset</a>
-                        </div>
+                            </div>
                     </div>
                 </form>
             </div>
@@ -66,7 +66,7 @@
                         </div>
                         {% endif %}
                     </div>
-                    <div class="collapsible-body prewrap">
+                    <div class="collapsible-body">
                         <p>Make: {{ review.make }}</p><br>
                         <p>Model: {{ review.model }}</p><br>
                         <p>Year: {{ review.year }}</p><br>
