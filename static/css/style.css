@@ -31,8 +31,8 @@ nav, h1, h2, h3, h4 {
 }
 
 /* Styles search bar on home page */
-.search-bar {
-    padding-left: 11vw;
+.row col.m6 .search-bar {
+    text-align: center;
 }
 
 
@@ -75,6 +75,11 @@ footer .row {
 }
 .insta {
     color: #e1306c;;
+}
+
+/* Styles the modal buttons */
+.modal .modal-footer {
+    text-align: center;
 }
 
 /* Mobile view */

@@ -45,13 +45,11 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="rating" name="rating" minlength="1" maxlength="1" type="text" class="validate"
-                            value="{{ review.rating }}" required>
-                        <label for="rating">Rating</label>
+                        <input id="rating" name="rating" minlength="1" maxlength="1" type="text" pattern="^[0-5]{1}$"
+                        class="validate" value="{{ review.rating }}" required>
+                        <label for="rating">Rating 0-5</label>
                     </div>
                 </div>
-                <!-- Hidden input for admin editing to get owner -->
-                <input type="hidden" id="owner" name="owner" value="{{ review.owner }}">
                 <div class="row">
                     <div class="col s12 center-align">
                         <!-- Cancel button -->
