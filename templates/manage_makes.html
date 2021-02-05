@@ -3,33 +3,14 @@
 
     <h3 class="center-align">Manage Makes</h3>
     <div class="row container">
-            <h4>Edit Make</h4>
-            <form class="col s8 offset-s2" method="POST" action="">
-                <div class="input-field col s8 offset-s2">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        {% for make in makes %}
-                        <option value="{{ make.make }}">{{ make.make }}</option>
-                        {% endfor %}
-                    </select>
-                    <label>Select Make</label>
-                </div>
-                <!-- Submit button -->
-                <div class="row">
-                    <button type="submit" class="col s4 offset-s4 btn-large teal darken-2">
-                         Edit <i class="fas fa-sign-in-alt prefix"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
+        <!-- Add new make -->
+        <h4>Add New Make</h4>
         <div class="row container">
-            <h4>Add New Make</h4>
             <form class="col s8 offset-s2" method="POST" action="{{ url_for('add_make') }}">
-                
-                    <div class="row">
+                <div class="row">
                     <div class="input-field col s12" method="POST" action="">
-                        <input id="new_make" name="new_make" minlength="1" maxlength="15" type="text" 
-                        class="validate" required>
+                        <input id="new_make" name="new_make" minlength="1" maxlength="15" type="text" class="validate"
+                            required>
                         <label for="new_make">New Make</label>
                     </div>
                 </div>
@@ -41,7 +22,23 @@
                 </div>
             </form>
         </div>
-    {% endblock %}
-            
-            
-        
+        <!-- Edit make card panel -->
+        <div class="row">
+            <h4>Edit Make</h4>
+            {% for makes in makes %}
+            <div class="col s12 m3">
+                <div class="card teal darken-2 center-align">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ makes.make }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ url_for('edit_makes', makes_id=makes._id) }}" class="btn-small grey darken-2">Edit</a>
+                        <a href="#" class="btn-small red darken-2">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

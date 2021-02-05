@@ -229,10 +229,17 @@ def add_make():
     return render_template("manage_makes.html")
 
 
-@app.route("/edit_make/<make_id>", methods=["GET", "POST"])
-def edit_make(make_id):
-    make = mongo.db.makes.find_one({"_id": ObjectId(make_id)})
-    return render_template("manage_makes.html", make=make)
+@app.route("/edit_makes/<makes_id>", methods=["GET", "POST"])
+def edit_makes(makes_id):
+    if request.method == "POST":
+        edited = {
+            "make": request.form.get("make")
+        }
+        mongo.db.makes.update({"_id": ObjectId(makes_id)}, edited)
+        flash("Make Successfully Edited")
+        return redirect(url_for("get_makes"))
+    makes = mongo.db.makes.find_one({"_id": ObjectId(makes_id)})
+    return render_template("edit_makes.html", makes=makes)
 
 
 if __name__ == "__main__":
