@@ -39,26 +39,27 @@ The reason for creating this project is for my third milestone project for a sof
 ### Visiting users
 
 As a visiting user I want to:
--	Instantly understand the purpose of the website
--	Be able to swiftly decipher site navigation.
--	Find out how good a particular car is?
--	Be able to search easily to find if there is a review on the car, I am interested in.
--	Be able to register and become a member to post my own review.
+-	"Instantly understand the purpose of the website"
+-	"Be able to swiftly decipher site navigation."
+-	"Find out how good a particular car is?"
+-	"Be able to search easily to find if there is a review on the car, I am interested in."
+-	"Be able to register and become a member to post my own review."
 
 ### Returning users
 
 As a returning user I would like to:
--	Be able to login and see my profile.
--	Be able to delete and edit my old reviews.
--	Write a new review.
--	Be able to log back out again.
+-	"Be able to login and see my profile."
+-	"Be able to delete and edit my old reviews."
+-	"Write a new review."
+-	"Be able to log back out again."
 
 ### Admin users
 
 As an admin user I require the ability to:
--	Log in as an admin user.
--	Delete or edit all member reviews.
--	Search all members reviews.
+-   "Log in as an admin user."
+-   "Delete or edit all member reviews."
+-   "Search all members reviews."
+-   "Create, edit and delete the makes of the cars"
 
 # UX
 
@@ -92,16 +93,14 @@ Based upon the strategy the features and functionality I want to include are as 
 -	An accordion containing the current profile owners’ reviews.
 -	Ability for the user create, read, edit or delete their reviews.
 -	A form for the user to fill out containing the make, model, year and review.
--	Star rating radio buttons for the user to rate the car from 1 to 5.
+-	Ability for the user to rate the car from 0 to 5.
 -	A form with the ability to edit make, model, year and review.
--	Star rating radio buttons for the user to edit the rating of the car from 1 to 5.
--	A search box where the admin user can search for reviews.
--	An accordion containing all the reviews with options to delete or edit them for the admin user.
+-	A page containing all the makes with options to delete or edit them for the admin user.
 
 ## Structure
 
 The site will be structured in a linear format keeping the users’ expectations as the main priority. 
-It will contain 7 pages each with the same navbar and footer. The layout will be similar across all pages 
+It will contain 8 pages each with the same navbar and footer. The layout will be similar across all pages 
 to keep a consistent and clean UX.
 
 ## Skeleton 
@@ -341,12 +340,12 @@ to keep a consistent and clean UX.
     * Model
     * Year
 	* Review
-	* Radio button star rating out of 5.
+	* Rating out of 5.
 
 Nav Links:  
-Logged out – Home | profile (takes you to login) | New review (takes you to login) | Login.  
+Logged out – Home | Login | Register.  
 Logged in – Home | Profile  | New Review | Logout.  
-Admin – Home | Profile | New Review | Manage Reviews | Logout.
+Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 ### Profile Page
 
@@ -358,24 +357,28 @@ Admin – Home | Profile | New Review | Manage Reviews | Logout.
     * Model
     * Year
 	* Review
-	* Radio button star rating out of 5.
+	* Rating out of 5.
 -	Buttons so they can edit and delete their reviews on the accordion.
 -	Central button below that links to new review page.
 
 Nav Links:  
 Logged in – Home | Profile | New Review | Logout.  
-Admin – Home | Profile | New Review | Manage Reviews | Logout.
+Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 ### New Review Page
 
 -	Title of “New Review”
--	A form for the user to fill out containing text boxes for the make, model, year and review.
--	Star rating radio buttons for the user to rate the car from 1 to 5.
--	A central save button below.
+-   Review form for the user to fill out containing:
+    *   A dropdown containing all the car makes for the user to select.
+    *   Model input field.
+    *   Year input field.
+    *   Review input field.
+    *	Input field for the user to rate the car from 0 to 5.
+    *	A central save button below.
 
 Nav Links:  
 Logged in – Home | Profile | New Review | Logout.  
-Admin – Home | Profile | New Review | Manage Reviews | Logout.
+Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 ### Login Page
 
@@ -386,7 +389,7 @@ Admin – Home | Profile | New Review | Manage Reviews | Logout.
 -	A link to register if not already registered.
 
 Nav links:  
-Logged out – Home | Profile (takes you to login) | New Review (takes you to login) | Register.
+Logged out – Home | Login | Register.
 
 ### Register Page
 
@@ -397,41 +400,52 @@ Logged out – Home | Profile (takes you to login) | New Review (takes you to lo
 -	A link to login if already registered.
 
 Nav links:  
-Logged out – Home | Profile (takes you to login) | New Review (takes you to login) | Login.
+Logged out – Home | Login | Register.
 
-### Edit Page
+### Edit Review Page
 
 -	Title of “Edit Review”
--	A form with the ability to edit make, model, year and review.
--	Star rating radio buttons for the user to edit the rating of the car from 1 to 5.
--	A save button.
--	A cancel button.
+-   Prefilled edit form for the user to edit containing:
+    *   A dropdown containing all the car makes for the user to select.
+    *   Model input field.
+    *   Year input field.
+    *   Review input field.
+    *	Input field for the user to rate the car from 0 to 5.
+    *	A central save and cancel button below.
 
 Nav Links:  
 Logged in – Home | Profile | New Review | Logout.  
-Admin – Home | Profile | New Review | Manage Reviews | Logout.
+Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 
-### Manage Reviews Page (Admin Only)
+### Manage Makes Page (Admin Only)
 
--	Title of “Manage reviews.
--	A central search box where the admin user can search for reviews.
--	Accordion containing all the owners’ reviews.
--	Each dropdown will have the title of the make and model of car and the year.
--	Each dropdown will contain the information:
-    * Make
-    * Model
-    * Year
-	* Review
-	* Radio button star rating out of 5.
--	Buttons so they can edit and delete their reviews on the accordion.
+-	Title of “Manage Makes"
+-	Sub heading "Add New Make"
+-   Central text input to insert a new make.
+-   Central "Save Make" button.
+-   Sub Heading "Edit Make"
+-   Card Panels containing all of the makes in the DB.
+-   Edit and delete button inside each card panel.
+
 
 Nav Links:  
-Admin – Home | Profile | New Review | Manage Reviews | Logout.
+Admin – Home | Profile | New Review | Manage Makes | Logout.
+
+### Edit Makes Page
+
+-  Title of "Edit Makes".
+-  Prefilled text input (with the selected make that they wanted to edit).
+-  Central cancel and save buttons.
+
+Nav Links:  
+Admin – Home | Profile | New Review | Manage Makes | Logout.
+
+
 
 ### Features To Add In The Future
 -	The ability to upload pictures to the profiles, these could be of the car or the user or both.
--	Each car in its own category of make. This would make browsing through the cars easier.
+-	Star rating system where user can click a radio button of stars 1 to 5. 
 -	Users ability to see previously owned cars of each reviewer so they can gauge the prior knowledge of the reviewer. 
 
 
