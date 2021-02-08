@@ -309,9 +309,18 @@ to keep a consistent and clean UX.
 
 ### Theme
 
+The website will have an automotive theme that will need to look modern and not too cluttered 
+to maintain a clean user experience.  
+
 ### Typography
 
+The font for the title, navbar and heading will be 'Faster One' to give the site its 'automotive' feel. 
+The rest of the site will have the font 'Contrail One' as its still has an 'automotive' feel to it but
+will be much clearer than 'Faster One' in the small font sizes.
+
 ### Colour Scheme
+
+Functional and modern colour scheme, with a white background to keep clean UX.
 
 ## Features
 
@@ -320,7 +329,7 @@ to keep a consistent and clean UX.
 -	All pages will contain the navbar.
 -	Page name on the left-hand side.
 -	Navigation links on the right-hand side.
--	Navbar colour will be #.....
+-	Navbar colour will be materialize class colour teal darken-2.
 -	The navbar links will differ depending on if and who is logged in and on what page. (see each page)
 
 ### Footer
