@@ -38,8 +38,6 @@ def search():
     """
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
-    # if session["user"] == "admin":  # And on manage reviews page??
-    #     return render_template("manage_reviews.html", reviews=reviews)
 
     return render_template("home.html", reviews=reviews)
 
@@ -126,7 +124,9 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookies
+    """
+    Remove user from session cookies
+    """
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -204,7 +204,9 @@ def delete_review(review_id):
     """
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
-    if session["user"] == "admin":  # needs to redirect to home when admin deletes on home
+
+    if session["user"] == "admin":
+        # needs to redirect to home when admin deletes on home
         return redirect(url_for(
             "get_reviews", username=session["user"]))
 
@@ -226,6 +228,9 @@ def get_makes():
 
 @app.route("/add_make", methods=["GET", "POST"])
 def add_make():
+    """
+    This function adds new makes to the db.
+    """
     if "user" in session:
         if request.method == "POST":
             make = {
@@ -242,6 +247,10 @@ def add_make():
 
 @app.route("/edit_makes/<makes_id>", methods=["GET", "POST"])
 def edit_makes(makes_id):
+    """
+    This function gets makes form the db and returns edited makes
+    to the db.
+    """
     if "user" in session:
         if request.method == "POST":
             edited = {
@@ -258,6 +267,9 @@ def edit_makes(makes_id):
 
 @app.route("/delete_makes/<makes_id>")
 def delete_makes(makes_id):
+    """
+    This function removes makes from the db.
+    """
     mongo.db.makes.remove({"_id": ObjectId(makes_id)})
     flash("Make Successfully deleted")
     return redirect(url_for("get_makes"))

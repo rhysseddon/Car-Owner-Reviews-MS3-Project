@@ -31,10 +31,10 @@ nav, h1, h2, h3, h4 {
 }
 
 /* Styles search bar on home page */
-.row col.m6 .search-bar {
-    text-align: center;
+.row .col .search-bar {
+    padding-left: 11vw;
+   
 }
-
 
 /* Styles accordion titles */
 .collapsible-header .col strong {
