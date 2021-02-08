@@ -450,6 +450,11 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 Nav Links:  
 Admin – Home | Profile | New Review | Manage Makes | Logout.
 
+### Modal 
+
+- When deleting makes or reviews users should be prompted with a pop up modal.
+- The modal should contain the title "Are You Sure You Want To Delete?"
+- Centralised cancel and delete buttons.
 
 
 ### Features To Add In The Future
