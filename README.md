@@ -159,10 +159,18 @@ to keep a consistent and clean UX.
 </details>
 
 <details>
-<summary>Desktop Manage Reviews (Click for image)</summary>
+<summary>Desktop Manage Makes (Click for image)</summary>
 <p align="center">
 
-![Image](static/assets/wireframes/desktop-manage-reviews.png)
+![Image](static/assets/wireframes/desktop-manage-makes.png)
+</p>
+</details>
+
+<details>
+<summary>Desktop Edit Makes (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/wireframes/desktop-edit-make.png)
 </p>
 </details>
 
@@ -217,10 +225,18 @@ to keep a consistent and clean UX.
 </details>
 
 <details>
-<summary>Tablet Manage Reviews (Click for image)</summary>
+<summary>Tablet Manage Makes (Click for image)</summary>
 <p align="center">
 
-![Image](static/assets/wireframes/tablet-manage-reviews.png)
+![Image](static/assets/wireframes/tablet-manage-makes.png)
+</p>
+</details>
+
+<details>
+<summary>Tablet Edit Makes (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/wireframes/tablet-edit-make.png)
 </p>
 </details>
 
@@ -275,10 +291,18 @@ to keep a consistent and clean UX.
 </details>
 
 <details>
-<summary>Mobile Manage Reviews (Click for image)</summary>
+<summary>Mobile Manage Makes (Click for image)</summary>
 <p align="center">
 
-![Image](static/assets/wireframes/mobile-manage-reviews.png)
+![Image](static/assets/wireframes/mobile-manage-makes.png)
+</p>
+</details>
+
+<details>
+<summary>Mobile Edit Makes (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/wireframes/mobile-edit-make.png)
 </p>
 </details>
 
