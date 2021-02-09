@@ -97,6 +97,46 @@ Based upon the strategy the features and functionality I want to include are as 
 -	A form with the ability to edit make, model, year and review.
 -	A page containing all the makes with options to delete or edit them for the admin user.
 
+## Database
+
+To enable create read update an delete functionality the website will require a non-relational data base (No SQL).
+The data base will have three collections:
+
+### Users
+
+A document of the registered users. 
+
+Key | Value
+---|---
+_id |ObjectId  
+username | string  
+password | string
+
+### Reviews
+
+A document of reviews written by the users. Accessible by admin and partially by registered users. 
+
+Key | Value
+---|---
+_id |ObjectId 
+make | string
+model | string
+year | int
+review | string
+rating | int
+owner | string
+
+### Makes
+
+A document of makes added by admin users. Only accessible by admin.
+
+Key | Value
+---|---
+_id |ObjectId 
+make | string
+
+### Database Schema
+
 ## Structure
 
 The site will be structured in a linear format keeping the users’ expectations as the main priority. 
