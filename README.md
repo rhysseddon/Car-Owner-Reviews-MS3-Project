@@ -578,7 +578,51 @@ All used to help with the development of the backend of the website:
 - Google Chrome DevTools - Used for testing website responsiveness.
 - Randomkeygen.com - Used for generating a random secret key.
 
- 
+## Testing
+For the testing page [(click Here)](TESTING.md)
+
+## Deployment
+
+### Setup
+1. In the IDE create an env.py file to store the sensitive data and hidden using environment variables.
+Then add to a .gitignore file so it is ignored when pushing to gitHub.
+Default environment variables setup for env.py is as follows:
+- Import os
+- os.environ.setdefault("IP", "Added by user")
+- os.environ.setdefault("PORT", "Added by user")
+- os.environ.setdefault("SECRET_KEY", "Added by user")
+- os.environ.setdefault("MONGO_URI", "Added by user")
+- os.environ.setdefault("MONGO_DBNAME", "Added by user")
+
+2. Add required files for Heroku to run the app. Create requirements.txt and Procfile:
+- `$ pip3 freeze --local > requirements.txt`
+- `$ echo web: python app.py > Procfile`
+3. Push these 2 files to gitHub.
+
+### Heroku Deployment
+
+1. Login to Heroku.com and from dashboard go to "create new app" and add details of app to create.
+2. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
+3. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.
+4. Go to settings tab for the app and select reveal config vars.
+5. Add in the variables from the env.py file.
+6. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
+7. Under "Manual Deploy" select "Deploy Branch"
+8. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
+
+
+### Cloning on GitHub
+- Login to GitHub.com.
+- Open my repositories.
+- Click "Code" then under "Clone" copy the link with the HTTPS URL.  
+![Image](static/assets/images/readme-images/download-clone-screenshot.png)
+- Go to the terminal in your IDE environment. 
+- Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
+- Type `git clone` and paste the copied HTTPS URL.
+- After pressing enter the clone will be saved to your chosen directory. 
+
+
+
 
 
 
