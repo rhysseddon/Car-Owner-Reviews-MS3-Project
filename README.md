@@ -29,10 +29,17 @@
     * [Packages](#Packages)
     * [Tools](#Tools)
 * [Testing](#Testing)
+* [Best Practices](#Best-Practices)
+    * [Naming Conventions](#Naming-Conventions)
+    * [Code Validation](#Code-Validation)
 * [Deployment](#Deployment)
     * [Setup](#Setup)
     * [Heroku Deployment](#Heroku-Deployment)
     * [Cloning on GitHub](#Cloning-on-GitHub)
+* [Credits](#Credits)
+    * [Problems Encountered](#Problems-Encountered)
+    * [Images](#Images)
+    * [Acknowledgements](#Acknowledgements)
 
 ## Purpose
 
@@ -574,16 +581,39 @@ All used to help with the development of the backend of the website:
 
 ### Tools
 
-- Google fonts - Used to obtain the fonts.
-- Jshint.com/ - Used for validation of Javascript code.
-- Validator.w3.org - Used for validation of HTML code.
-- Jigsaw.w3.org/css-validator - Used for validation of CSS code.
-- Google.com/test/mobile-friendly - Used for testing the website mobile responsiveness.
+- [Google fonts](http://Fonts.google.com) - Used to obtain the fonts.
+- [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code.
+- [Google fonts](http://Fonts.google.com)- Used for validation of HTML code.
+- [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
+- [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
 - Google Chrome DevTools - Used for testing website responsiveness.
-- Randomkeygen.com - Used for generating a random secret key.
+- [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
 
 ## Testing
 For the testing page [(click Here)](TESTING.md)
+
+### Naming Conventions
+All names should be relevant and as consistent as possible to enable the reader to understand the coding quickly and efficiently.
+
+- Javacript functions are written in camelCase. 
+- Class and IDs are written in lowercase and multi word names are joined with a hyphen.
+- File names and image names are written in lowercase and multi word names are joined with a hyphen.
+- Multi word Python function and variable news are joined with an underscore. 
+
+### Code Validation
+
+- Code passed the jsHint validator test with no errors or warnings.
+
+![Image](assets/images/readme-images/jshint-validator-results.png)
+
+- Code passed the W3 HTML validator on second attempt, after fixing 2 bugs [See fixed bugs](TESTING.md)
+
+![Image](assets/images/readme-images/html-validator-passed.png)
+
+- CSS W3 validator had 2 errors. [See outstanding bugs](TESTING.md)
+
+![Image](assets/images/readme-images/css-validator.png)
+
 
 ## Deployment
 
@@ -610,7 +640,7 @@ Default environment variables setup for env.py is as follows:
 2. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
 ![Image](static/assets/images/readme-images/github-connect-screenshot.png)
 3. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.
-4. Go to settings tab for the app and select reveal config vars.
+4. Go to settings tab for the app and select "Reveal Config Vars".
 ![Image](static/assets/images/readme-images/config-screenshot.png)
 5. Add in the variables from the env.py file.
 6. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
@@ -629,12 +659,14 @@ Default environment variables setup for env.py is as follows:
 - Type `git clone` and paste the copied HTTPS URL.
 - After pressing enter the clone will be saved to your chosen directory. 
 
+## Credits
 
+### Problems Encountered
 
+### Images
 
+- The home page hero images is open source provided by Pixabay here on [www.pexels.com](https://www.pexels.com/photo/vehicles-parked-inside-elevated-parking-lot-63294/)
 
-
-
-
+### Acknowledgements
 
 
