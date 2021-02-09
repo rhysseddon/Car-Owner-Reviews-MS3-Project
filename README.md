@@ -21,6 +21,7 @@
     * [Register Page](#Register-Page)
     * [Edit Page](#Edit-Page)
     * [Manage Reviews Page](#Manage-Reviews-Page)
+    * [Defensive Programming](#Defensive-Programming)
     * [Features To Add In The Future](#Features-To-Add-In-The-Future)
 * [Technologies Used](#Technologies-Used)
     * [Languages](#Languages)
@@ -507,8 +508,17 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 Nav Links:  
 Admin – Home | Profile | New Review | Manage Makes | Logout.
 
-### Modal 
+### Defensive Programming
 
+#### 403 Error
+
+- Defensive programming will be put in place to prevent non logged in users forcing there way in by
+by adding the correct URL. Instead a 403 error will appear.
+
+#### Modal 
+
+- The modal will be created as a line of defence to prevent users from deleting makes or
+reviews accidentally.
 - When deleting makes or reviews users should be prompted with a pop up modal.
 - The modal should contain the title "Are You Sure You Want To Delete?"
 - Centralised cancel and delete buttons.
@@ -518,6 +528,7 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 -	The ability to upload pictures to the profiles, these could be of the car or the user or both.
 -	Star rating system where user can click a radio button of stars 1 to 5. 
 -	Users ability to see previously owned cars of each reviewer so they can gauge the prior knowledge of the reviewer. 
+
 
 ## Technologies Used 
 
