@@ -512,8 +512,8 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 #### 403 Error
 
-- Defensive programming will be put in place to prevent non logged in users forcing there way in by
-by adding the correct URL. Instead a 403 error will appear.
+- Defensive programming will be put in place to prevent non logged in users from forcing there way in by
+adding the correct URL. Instead a 403 error will appear.
 
 #### Modal 
 
@@ -650,7 +650,7 @@ Default environment variables setup for env.py is as follows:
 ![Image](static/assets/images/readme-images/create-new-screenshot.png)
 2. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
 ![Image](static/assets/images/readme-images/github-connect-screenshot.png)
-3. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.
+3. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.  
 4. Go to settings tab for the app and select "Reveal Config Vars".
 ![Image](static/assets/images/readme-images/config-screenshot.png)
 5. Add in the variables from the env.py file.
