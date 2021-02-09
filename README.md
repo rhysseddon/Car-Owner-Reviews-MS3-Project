@@ -22,6 +22,13 @@
     * [Edit Page](#Edit-Page)
     * [Manage Reviews Page](#Manage-Reviews-Page)
     * [Features To Add In The Future](#Features-To-Add-In-The-Future)
+* [Technologies Used](#Technologies-Used)
+    * [Languages](#Languages)
+    * [Libraries](#Libraries)
+    * [IDE and Hosting](#IDE-and-Hosting)
+    * [Packages](#Packages)
+    * [Tools](#Tools)
+* [Testing](#Testing)
 
 ## Purpose
 
