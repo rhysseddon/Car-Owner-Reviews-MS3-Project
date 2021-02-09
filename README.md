@@ -135,7 +135,6 @@ Key | Value
 _id |ObjectId 
 make | string
 
-### Database Schema
 
 ## Structure
 
@@ -501,6 +500,79 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 -	The ability to upload pictures to the profiles, these could be of the car or the user or both.
 -	Star rating system where user can click a radio button of stars 1 to 5. 
 -	Users ability to see previously owned cars of each reviewer so they can gauge the prior knowledge of the reviewer. 
+
+## Technologies Used 
+
+### Languages 
+
+- Html: Used for the site structure.
+- CSS: Used for adding styles to the website.
+- Javascript: Used to add the games interactive features.
+- Python: Used to handle the backend functionality.
+
+### Libraries
+
+#### Materialize
+
+CSS | Usage
+---|---
+Color | Colouring of all components  
+Grid | The layout and responsiveness
+
+Components | Usage
+---|---
+Buttons | Used for all buttons layout and responsiveness
+Card Panel | Input fields layout and responsiveness
+Footer | Footer layout and responsiveness
+Navbar | Navbar layout and responsiveness
+
+Javascript | Usage
+---|---
+Collapsible | The review accordions
+Modals | For defensive programming when deleting makes or reviews
+Sidenav | For mobile nav 
+
+Form | Usage
+---|---
+Select | For selecting the makes
+Input Fields | For add text user input
+
+#### JQuery
+
+Used for event handling and validating the choose make input on the new review form.
+
+### IDE and Hosting
+
+- Gitpod: Used as IDE environment.
+- Git: Used for version control.
+- Github: Used for version control and repository hosting.
+- MongoDB: Used for hosting database.
+- Heroku: Used to host live website.
+
+### Packages
+
+All used to help with the development of the backend of the website:
+
+- click 7.1.2
+- dnspython 2.1.0
+- Flask 1.1.2
+- Flask-PyMongo 2.3.0
+- itsdangerous 1.1.0
+- pymongo 3.11.2
+- Werkzeug 1.0.1
+
+### Tools
+
+- Google fonts - Used to obtain the fonts.
+- Jshint.com/ - Used for validation of Javascript code.
+- Validator.w3.org - Used for validation of HTML code.
+- Jigsaw.w3.org/css-validator - Used for validation of CSS code.
+- Google.com/test/mobile-friendly - Used for testing the website mobile responsiveness.
+- Google Chrome DevTools - Used for testing website responsiveness.
+- Randomkeygen.com - Used for generating a random secret key.
+
+ 
+
 
 
 
