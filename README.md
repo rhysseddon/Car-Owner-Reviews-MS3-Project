@@ -29,6 +29,10 @@
     * [Packages](#Packages)
     * [Tools](#Tools)
 * [Testing](#Testing)
+* [Deployment](#Deployment)
+    * [Setup](#Setup)
+    * [Heroku Deployment](#Heroku-Deployment)
+    * [Cloning on GitHub](#Cloning-on-GitHub)
 
 ## Purpose
 
@@ -601,14 +605,18 @@ Default environment variables setup for env.py is as follows:
 
 ### Heroku Deployment
 
-1. Login to Heroku.com and from dashboard go to "create new app" and add details of app to create.
+1. Login to Heroku.com and from dashboard go to "new" - "create new app" and add details of app to create.
+![Image](static/assets/images/readme-images/create-new-screenshot.png)
 2. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
+![Image](static/assets/images/readme-images/github-connect-screenshot.png)
 3. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.
 4. Go to settings tab for the app and select reveal config vars.
+![Image](static/assets/images/readme-images/config-screenshot.png)
 5. Add in the variables from the env.py file.
 6. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
 7. Under "Manual Deploy" select "Deploy Branch"
 8. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
+![Image](static/assets/images/readme-images/deployed-screenshot.png)
 
 
 ### Cloning on GitHub
