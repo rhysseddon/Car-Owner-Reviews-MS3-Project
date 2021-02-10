@@ -44,11 +44,11 @@ Functionality on both top nav and side nav links:
 - HOME is selected all users should be directed to home page.
 - LOGIN is selected all users should be directed to login page.
 - RESISTER is selected all users should be directed to register page.
-- PROFILE is selected all logged in users should be directed to PROFILE page.
+- PROFILE is selected all logged in users should be directed to profile page.
 - LOGOUT is selected all logged in users should be directed to login page and a flash message should appear 
 with the message "YOU HAVE BEEN LOGGED OUT".  
 ![Image](static/assets/images/readme-images/logged-out-flash-screenshot.png)
-- NEW REVIEW is selected all logged in users should be directed to NEW REVIEW page.
+- NEW REVIEW is selected all logged in users should be directed to new review page.
 - MANAGE MAKES is selected logged admin in users should be directed to manage makes page.
 - Functionality should remain the same across all pages.
 
