@@ -19,14 +19,12 @@
 ## Navbar
 
 Display:
-- Navbar should display "CAR OWNER REVIEWS" title on right hand side.
+- "CAR OWNER REVIEWS" title on left hand side.
+- Links on right hand side.
 ![Image](static/assets/images/readme-images/navbar-screenshot.png)
-- For non logged in users navbar should display HOME | LOGIN | REGISTER
-- For logged in users navbar should display  HOME | PROFILE | NEW REVIEW | LOGOUT
-- For logged in admin users navbar should display  HOME | PROFILE | NEW REVIEW | MANAGE MAKES | LOGOUT
 - On screen sizes less than 998px navigation links should collapse into burger icon and when selected 
 should display as a side nav.
-![Image](static/assets/images/readme-images/navbar-screenshot.png)
+![Image](static/assets/images/readme-images/burger-screenshot.png)
 
 <details>
 <summary>Side Nav Screenshot (Click for image)</summary>
@@ -35,6 +33,10 @@ should display as a side nav.
 ![Image](static/assets/images/readme-images/sidenav-screenshot.png)
 </p>
 </details>
+
+- For non logged in users nav links should display HOME | LOGIN | REGISTER
+- For logged in users nav links should display  HOME | PROFILE | NEW REVIEW | LOGOUT
+- For logged in admin users nav links should display  HOME | PROFILE | NEW REVIEW | MANAGE MAKES | LOGOUT
 - Navbar should display the same across all pages.  
 
 Functionality on both top nav and side nav links:  
