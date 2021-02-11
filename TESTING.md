@@ -299,7 +299,7 @@ flash with "Please match the format requested".
 - If all of the fields are underlined in green, the data from each field must be save to the database
 and the user must re-direct to the home page with a message: "REVIEW SUCCESSFULLY ADDED".
 - The review data must now appear in the users profile accordion and on the homepage accordion.
-![Image](static/assets/images/readme-images/review-success-screenshot.png)
+![Image](static/assets/images/readme-images/success-review-screenshot.png)
 
 
 
