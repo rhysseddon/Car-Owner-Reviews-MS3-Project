@@ -88,4 +88,7 @@ footer .row {
 nav .brand-logo {
 font-size: 1.3rem;
 }
+.btn-small {
+    padding: 0px 5px;
+}
 }
