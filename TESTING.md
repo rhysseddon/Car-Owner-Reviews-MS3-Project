@@ -8,6 +8,8 @@
 - [Footer](#Footer)
 - [Home Page](#Home-Page)
 - [Register Page](#Register-Page)
+- [Login Page](#Login-Page)
+- [Profile Page](#Profile-Page)
  
 
 #### Return to [README.md](README.md)
@@ -44,7 +46,7 @@ should display as a side nav.
 - For logged in admin users nav links should display  HOME | PROFILE | NEW REVIEW | MANAGE MAKES | LOGOUT
 - Navbar should display the same across all pages.  
 
-Functionality on both top nav and side nav links:  
+Functionality for both top nav and side nav links:  
 
 - HOME is selected all users should be directed to home page.
 - LOGIN is selected all users should be directed to login page.
@@ -119,9 +121,11 @@ and a register and login button below.
 
  - All reviews section should display a central title "ALL REVIEWS".
  - A dropdown accordion containing the reviews should display below.
- - Each accordion section should contain a down arrow icon, the make, model, year and creator of the 
- review
- - For admin users "edit" button and "delete" buttons should also display on the accordion. 
+ - Each accordion section header should contain a down arrow icon, the make, model, year and creator of the 
+ review (owner)
+ - When each header is selected a dropdown should appear below containing: Make, Model, Year, Review, Rating
+ and Owner fields. 
+ - For admin users "EDIT" button and "DELETE" buttons should also display on the accordion. 
 
  <details>
 <summary>All reviews Screenshot (Click for image)</summary>
@@ -144,13 +148,13 @@ should then appear in the accordion below.
 appear.
 - If the user inputs less than 3 letters they should be given a warning displaying "Please lengthen this 
 text to 3 characters or more (you are currently using *no. of characters* characters").
-- If the reset button is selected the page should revert back to all reviews (if any) displaying.
-- When "Edit" is selected on the review accordion admin users should be redirected to prefilled 
+- If the "RESET" button is selected the page should revert back to all reviews (if any) displaying.
+- When "EDIT" is selected on the review accordion admin users should be redirected to prefilled 
 edit page.
-- When "Delete" is selected, the delete popup modal should appear.
-- If "Delete" is again selected on the modal, the corresponding review will be permanently deleted from the accordion 
+- When "DELETE" is selected, the delete popup modal should appear.
+- If "DELETE" is again selected on the modal, the corresponding review will be permanently deleted from the accordion 
 and the database.
-- If cancel is selected, it should revert back to the all reviews page.
+- If "CANCEL" is selected, it should revert back to the all reviews page.
 
  <details>
 <summary>Delete Modal Screenshot (Click for image)</summary>
@@ -164,6 +168,7 @@ and the database.
 
 Display:
 
+- Should retain the basic layout and remain responsive on all screen sizes.
 - Should have the central title "REGISTER"
 - Central card panel form should display.
 - Username input with icon and placeholder "Please enter a username - between 5 and 12 characters"  
@@ -196,6 +201,7 @@ and password re entered to check if the registration has been successful.
 
 Display:
 
+- Should retain the basic layout and remain responsive on all screen sizes.
 - Should have the central title "LOGIN"
 - Central card panel form should display.
 - Username input with icon and placeholder "Please enter a username - between 5 and 12 characters"  
@@ -221,4 +227,43 @@ login button is selected a warning will appear that reads: "Please match the for
 redirected to the profile page and a flash message will appear: "WELCOME *username*"  
 ![Image](static/assets/images/readme-images/welcome-profile-screenshot.png)
 - The "Register Here" link below should redirect to login page.
+
+## Profile Page
+
+Display:
+
+- Should retain the basic layout and remain responsive on all screen sizes.
+- The page heading should display "*username*'s Profile".
+- The sub heading should display "Your Reviews"
+- A dropdown accordion containing the users reviews should display below.
+- Each accordion section header should contain a down arrow icon, the make, model and year.
+- When each header is selected a dropdown should appear below containing: Make, Model, Year, Review
+and rating.
+- "EDIT" and "DELETE" buttons should also display on the accordion header.
+- When there are no reviews in the database, in the place of the accordion a message will appear
+ "NO REVIEWS FOUND".
+- Below the accordion a central button "ADD NEW REVIEW" with a plus icon.
+
+<details>
+<summary>Profile Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/profile-screenshot.png)
+</p>
+</details>
+
+Functionality:
+
+- When "EDIT" is selected on the review accordion users should be redirected to prefilled 
+edit page.
+- When "DELETE" is selected, the delete popup modal should appear.
+- If "DELETE" is again selected on the modal, the corresponding review will be permanently deleted from the accordion 
+and the database. 
+- If "CANCEL" is selected, it should revert back to the all reviews page.
+- If "ADD NEW REVIEW" is selected users should be directed to the new review page.
+
+
+
+
+
 
