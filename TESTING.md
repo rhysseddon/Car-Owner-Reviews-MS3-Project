@@ -7,7 +7,7 @@
 - [Footer](#Footer)
 - [Footer](#Footer)
 - [Home Page](#Home-Page)
-- [Register](#Register)
+- [Register Page](#Register-Page)
  
 
 #### Return to [README.md](README.md)
@@ -94,7 +94,7 @@ Display:
 - Welcome section should display above search bar on mobile screen sizes.  
 
 <details>
-<summary>Welcome Section Screenshot (Click for image)</summary>
+<summary>Welcome Section Mobile Screenshot (Click for image)</summary>
 <p align="center">
 
 ![Image](static/assets/images/readme-images/welcome-search-mobile-screenshot.png)
@@ -148,7 +148,7 @@ text to 3 characters or more (you are currently using *no. of characters* charac
 - When "Edit" is selected on the review accordion admin users should be redirected to prefilled 
 edit page.
 - When "Delete" is selected, the delete popup modal should appear.
-- If delete is again selected on the modal, the coresponding review will be permanently deleted from the accordion 
+- If "Delete" is again selected on the modal, the corresponding review will be permanently deleted from the accordion 
 and the database.
 - If cancel is selected, it should revert back to the all reviews page.
 
@@ -160,7 +160,7 @@ and the database.
 </p>
 </details>
 
-## Register
+## Register Page
 
 Display:
 
@@ -169,7 +169,7 @@ Display:
 - Username input with icon and placeholder "Please enter a username - between 5 and 12 characters"  
 - Password input with icon and placeholder "Please enter a password - between 5 and 12 characters"
 - Central "REGISTER" button.
-- Below card panel centrally should read "Already Registered? Login Here" and the login here words 
+- Below card panel centrally should read "Already Registered? Login Here" and the "Login Here" text 
 should display as a link.  
 
  <details>
@@ -182,13 +182,43 @@ should display as a link.
 
 Functionality:
 
-- The username and password input fields should only allow 12 charcters to be typed.
+- The username and password input fields should only allow 12 characters to be entered.
 - If less than 5 characters are entered the below line should turn red and when the 
 register button is selected a warning will appear that reads: "Please match the format requested".
 - If both fields are correctly completed the below lines will turn green, the user will be
 redirected to the profile page and a flash message will appear: "WELCOME TO THE CLUB!"  
 ![Image](static/assets/images/readme-images/club-screenshot.png)
 - Testing should be now carried out by selecting "LOGOUT" in the navbar, then the previous username 
-and password re entered to check if the registation has been successful.
+and password re entered to check if the registration has been successful.
 - The "Login Here" link below should redirect to login page.
+
+## Login Page
+
+Display:
+
+- Should have the central title "LOGIN"
+- Central card panel form should display.
+- Username input with icon and placeholder "Please enter a username - between 5 and 12 characters"  
+- Password input with icon and placeholder "Please enter a password - between 5 and 12 characters"
+- Central "LOGIN" button.
+- Below card panel centrally should read "Not Registered? Register Here" and the "Register Here" text 
+should display as a link.  
+
+ <details>
+<summary>Login Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/login-screenshot.png)
+</p>
+</details>
+
+Functionality:
+
+- The username and password input fields should only allow 12 characters to be entered.
+- If less than 5 characters are entered the below line should turn red and when the 
+login button is selected a warning will appear that reads: "Please match the format requested".
+- If both fields are correctly completed the below lines will turn green, the user will be
+redirected to the profile page and a flash message will appear: "WELCOME *username*"  
+![Image](static/assets/images/readme-images/welcome-profile-screenshot.png)
+- The "Register Here" link below should redirect to login page.
 
