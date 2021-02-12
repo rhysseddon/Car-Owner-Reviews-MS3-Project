@@ -1,6 +1,6 @@
 # Testing
 
-## Contents
+## Test Cases Contents
 - [Favicon](#Favicon)
 - [Font](#Font)
 - [Navbar](#Navbar)
@@ -11,6 +11,10 @@
 - [Login Page](#Login-Page)
 - [Profile Page](#Profile-Page)
 - [New Review Page](#New-Review-Page)
+- [Edit Review Page](#Edit-Review-Page)
+- [Manage Makes Page](#Manage-Makes-Page)
+- [Edit Make Page](#Edit-Make-Page)
+- [403 Error](#403-Error)
  
 
 #### Return to [README.md](README.md)
@@ -268,7 +272,7 @@ and the database.
 - If "CANCEL" is selected, it must revert back to the all reviews page.
 - If "ADD NEW REVIEW" is selected users must be directed to the new review page.
 
-## New Review
+## New Review Page
 
 Display:
 
@@ -310,7 +314,7 @@ a message: "REVIEW SUCCESSFULLY ADDED".
 ![Image](static/assets/images/readme-images/success-review-screenshot.png)
 
 
-## Edit Review
+## Edit Review Page
 
 Display:
 
@@ -354,7 +358,7 @@ message: "REVIEW SUCCESSFULLY EDITED".
 ![Image](static/assets/images/readme-images/review-success-edit-screenshot.png)
 - If the "CANCEL" button is selected the user should be re-directed to the profile page. 
 
-## Manage makes
+## Manage Makes Page 
 
 - Manage makes page is only accessible as an admin user. To login as admin user please use:
     * username: admin
@@ -419,9 +423,17 @@ permanently deleted from the database.
 "Make" dropdown.
 - If "CANCEL" is selected, it must revert back to the manage makes page.
 
-## Edit Make
+## Edit Make Page
 
 Display:
+
+<details>
+<summary>Edit Make Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/edit-make-screenshot.png)
+</p>
+</details>
 
 - Must display heading "EDIT MAKES".
 - Card panel should display below with "Edit Make" text input.
@@ -439,3 +451,16 @@ flash message must appear: "MAKE SUCCESSFULLY EDITED"
 - The make should also now have also been edited in the new review page and the edit review page 
 in the "Make" dropdown.
 ![Image](static/assets/images/readme-images/make-success-screenshot.png)
+
+## 403 Error
+
+To test the 403 error: 
+ 1. Login as a user.
+ 2. Copy the URL from the browser.
+ 3. Select "LOGOUT" in the navbar.
+ 4. Paste the URL into the browser.
+ 5. 403 Error page should appear with the heading "FORBIDDEN ERROR 403"
+ 6. Repeat steps 1 to 5 pasting the URL on the homepage and the register page.
+
+![Image](static/assets/images/readme-images/error-screenshot.png)
+
