@@ -21,6 +21,8 @@
     * [Friends and Family](#Friends-and-Family)
     * [Mobile Friendly Test](#Mobile-Friendly-Test)
     * [User Story Testing Outcomes](#User-Story-Testing-Outcomes)
+- [Fixed Bugs](#Fixed-Bugs)
+- [Outstanding Bugs](#Outstanding-Bugs)
 
 #### Return to [README.md](README.md)
 
@@ -631,3 +633,19 @@ Admin has the ability to create, edit and delete the makes of cars on the manage
 ![Image](static/assets/images/readme-images/manage-makes.png)
 </p>
 </details>
+
+## Fixed Bugs
+
+- On the reviews accordions - the reviews that were longer than the width of the container
+were spilling outside of their container instead of creating a new line. Was resolved by
+using the Materialize class - `prewrap`.
+Credit: [Stack Overflow](https://stackoverflow.com/questions/41081380/white-space-pre-not-working-as-expected)
+
+- The wrong reviews and makes were getting deleted. I found this was due to the modal being 
+within the jinja for loop, so added `modal{{loop.index}}` to the modal id so the modal id will 
+ increment on each iteration of the jinja for loop.
+Credit: [Stack Overflow](https://stackoverflow.com/questions/46033541/flask-template-jinja-not-looping-as-expected)
+
+## Outstanding Bugs
+
+### Return to [README.md](README.md)
