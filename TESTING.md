@@ -287,21 +287,66 @@ Functionality:
 held in the database.
 - When a make is selected it must appear in the dropdown and a green line must appear below.
 - The model text input field must only allow 20 characters to be entered.
+- The model text input field must underline in green if less than 20 characters are entered.
 - The year input field must underline in red if anything other than 4 numbers is entered.
 - The year input field must underline in green if 4 numbers are entered.
 - The review input field must only allow 200 characters to be entered.
 - The review input field must underline in red if less than 5 characters are entered.
 - The rating input field must underline in red if anything other than 1 number 0 - 5 is entered.
-- When the save button is selected - if any of the input fields are underlined in red, a warning must 
+- When the "SAVE" button is selected - if any of the input fields are underlined in red, a warning must 
 flash with "Please match the format requested".
+- If any field is selected and left unfilled, when selecting elsewhere that field must underline in red. 
 - When the save button is selected - if any of the fields are empty, a warning must flash with 
 " Please fill in this field". Or if the drop down is empty "Please select an item in the list"
-- If all of the fields are underlined in green, the data from each field must be save to the database
-and the user must re-direct to the home page with a message: "REVIEW SUCCESSFULLY ADDED".
+- If all of the fields are underlined in green, and the "SAVE" button is selected, the data from each field 
+must be saved to the database and the user must be re-directed to the home page with 
+a message: "REVIEW SUCCESSFULLY ADDED".
 - The review data must now appear in the users profile accordion and on the homepage accordion.
 ![Image](static/assets/images/readme-images/success-review-screenshot.png)
 
 
+## Edit Review
 
+Display:
+
+- Must retain the basic layout and remain responsive on all screen sizes.
+- Must display the heading "EDIT REVIEW"
+- A pre-filled card panel from must display containing the data from the review the user wished to edit.
+- The card panel must contain Make (dropdown field). Followed by text input fields for:
+Model, Year with "YYYY" placeholder, Review and rating 0-5.
+- A central "SAVE" button with save icon and "CANCEL" button with cancel icon.
+
+<details>
+<summary>New Review Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/edit-review-screenshot.png)
+</p>
+</details>
+
+Functionality:
+
+- The form must be pre filled with the data from the review the user wished to edit.
+- The Make dropdown field must have the placeholder "Choose a make" and must contain all the makes
+held in the database.
+- When a make is selected it must appear in the dropdown and a green line must appear below.
+- The model text input field must only allow 20 characters to be entered.
+- The model text input field must underline in green if less than 20 characters are entered.
+- The year input field must underline in red if anything other than 4 numbers is entered.
+- The year input field must underline in green if 4 numbers are entered.
+- The review input field must only allow 200 characters to be entered.
+- The review input field must underline in red if less than 5 characters are entered.
+- The rating input field must underline in red if anything other than 1 number 0 - 5 is entered.
+- When the "SAVE" button is selected - if any of the input fields are underlined in red, a warning must 
+flash with "Please match the format requested".
+- If any field is selected and left empty, when selecting elsewhere that field must underline in red. 
+- When the save button is selected - if any of the fields are empty, a warning must flash with 
+" Please fill in this field". Or if the drop down is empty "Please select an item in the list"
+- If all of the fields are underlined in green, and the "SAVE" button is selected, the data from each 
+field must be saved to the database and the user must re-direct to the users profile page with a 
+message: "REVIEW SUCCESSFULLY EDITED".
+- The review data must now appear in the users profile accordion and on the homepage accordion.
+![Image](static/assets/images/readme-images/review-success-edit-screenshot.png)
+- If the "CANCEL" button is selected the user should be re-directed to the profile page. 
 
 
