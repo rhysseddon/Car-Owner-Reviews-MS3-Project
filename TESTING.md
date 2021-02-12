@@ -368,6 +368,7 @@ message: "REVIEW SUCCESSFULLY EDITED".
 - Central text input with place holder "New Make".
 - Central button "SAVE MAKE" with save icon.
 
+<details>
 <summary>Add New Make Screenshot (Click for image)</summary>
 <p align="center">
 
@@ -379,6 +380,7 @@ message: "REVIEW SUCCESSFULLY EDITED".
 - Card panels - each containing a make from the database and an "EDIT" and "DELETE" button.
 - In desktop and tablet view the card panels should display in rows of 4.
 
+<details>
 <summary>Desktop and Tablet Card Panel Screenshot (Click for image)</summary>
 <p align="center">
 
@@ -388,6 +390,7 @@ message: "REVIEW SUCCESSFULLY EDITED".
 
 - In mobile view 1 card panel per line.
 
+<details>
 <summary>Mobile Card Panel Screenshot (Click for image)</summary>
 <p align="center">
 
@@ -415,3 +418,24 @@ permanently deleted from the database.
 - The make should also now have also been deleted from the new review page and the edit review page in the 
 "Make" dropdown.
 - If "CANCEL" is selected, it must revert back to the manage makes page.
+
+## Edit Make
+
+Display:
+
+- Must display heading "EDIT MAKES".
+- Card panel should display below with "Edit Make" text input.
+- Text input must be pre-filled with the make the admin user chose to edit. 
+- Text input must only allow maximum of 15 characters.
+- When the text input is left empty, it must underline in red. 
+- When the text input is left empty and the "SAVE" button selected a warning should flash "Please fill 
+in this field".
+- When the "CANCEL" button is selected the make must remain unchanged and the admin user must be 
+re-directed to the manage makes page.
+- When the "Edit Make" text input is correctly entered it must underline in green.
+- When the "Edit Make" text input is correctly entered and the "SAVE" button selected the user
+should be re-directed to the manage makes page and the corresponding make must be edited and a above
+flash message must appear: "MAKE SUCCESSFULLY EDITED"
+- The make should also now have also been edited in the new review page and the edit review page 
+in the "Make" dropdown.
+![Image](static/assets/images/readme-images/make-success-screenshot.png)
