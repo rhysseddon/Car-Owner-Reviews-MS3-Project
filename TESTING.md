@@ -15,6 +15,11 @@
 
 #### Return to [README.md](README.md)
 
+### For testing as admin user, please use:
+
+#### Username: admin
+#### Password: admin
+
 ## Favicon
 - A red car must display as the favicon once the page has loaded.
 
@@ -349,4 +354,64 @@ message: "REVIEW SUCCESSFULLY EDITED".
 ![Image](static/assets/images/readme-images/review-success-edit-screenshot.png)
 - If the "CANCEL" button is selected the user should be re-directed to the profile page. 
 
+## Manage makes
 
+- Manage makes page is only accessible as an admin user. To login as admin user please use:
+    * username: admin
+    * password: admin
+
+- Display:
+
+- Must remain responsive on all screen sizes.
+- Must display the heading "MANAGE MAKES".
+- Subheading must display the text "ADD NEW MAKE".
+- Central text input with place holder "New Make".
+- Central button "SAVE MAKE" with save icon.
+
+<summary>Add New Make Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/add-new-screenshot.png)
+</p>
+</details>
+
+- Below add new make section, subheading to read "EDIT MAKE".
+- Card panels - each containing a make from the database and an "EDIT" and "DELETE" button.
+- In desktop and tablet view the card panels should display in rows of 4.
+
+<summary>Desktop and Tablet Card Panel Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/card4-screenshot.png)
+</p>
+</details>
+
+- In mobile view 1 card panel per line.
+
+<summary>Mobile Card Panel Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/card1-screenshot.png)
+</p>
+</details>
+
+Functionality:
+
+- The New Make text input field must only allow 15 characters to be entered.
+- If the New Make text input field is left empty, it must underline in red.
+- If the New Make text input field is left empty and the "SAVE MAKE" button selected, a warning must flash
+ "Please fill in this field".
+- When the New Make text input field is entered correctly it should underline in green.
+- When the New Make text input field is entered correctly and the "SAVE MAKE" button selected - The new make
+is added to the database and must appear in a card panel below and a message above should appear with "NEW
+ MAKE ADDED"
+- The make must also appear on the new review page and the edit review page in the "Make" dropdown.
+![Image](static/assets/images/readme-images/make-added-screenshot.png)
+- When "EDIT" is selected in an edit make card panel, the admin user should be re-directed to the edit makes 
+page.
+- When "DELETE" is selected, the delete popup modal must appear.
+- When "DELETE" is again selected on the modal, the corresponding make card panel must be deleted off the page and
+permanently deleted from the database.
+- The make should also now have also been deleted from the new review page and the edit review page in the 
+"Make" dropdown.
+- If "CANCEL" is selected, it must revert back to the manage makes page.
