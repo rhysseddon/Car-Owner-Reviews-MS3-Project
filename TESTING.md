@@ -477,7 +477,7 @@ To test the 403 error:
 
 ### Manual Test Case
 
-- A manual test case (detailed above) was carried out and passed.
+The manual test case detailed above was completed successfully.
 
 ### Devtools
 
@@ -514,7 +514,7 @@ I requested some feedback from friends and family on the how the website display
 
 - Passed the Google mobile friendly test.
 
-![Image](assets/images/readme-images/mobile-friendly-test.png)
+![Image](static/assets/images/readme-images/mobile-friendly-test.png)
 
 ## User Story Testing Outcomes
 
@@ -595,7 +595,7 @@ Returning users have the ability to write a new review.
 
 - "Be able to log back out again."
 
-Users have the ability to logout, by selecting "LOGOUT" on the navbar.
+Users have the ability to logout, by selecting "LOGOUT" on the navbar.  
 ![Image](static/assets/images/readme-images/logout.png)
 
 ### Admin
@@ -619,7 +619,7 @@ Admin has the ability to edit all registered user reviews on the home page accor
 
 - "Search all members reviews."
 
-Admin has the ability to search through all reviews on the homepage.
+Admin has the ability to search through all reviews on the homepage.  
 ![Image](static/assets/images/readme-images/search-screenshot.png)
 
 - "Create, edit and delete the makes of the cars"
