@@ -1,39 +1,46 @@
 # Testing
 
-## Test Cases Contents
-- [Favicon](#Favicon)
-- [Font](#Font)
-- [Navbar](#Navbar)
-- [Footer](#Footer)
-- [Footer](#Footer)
-- [Home Page](#Home-Page)
-- [Register Page](#Register-Page)
-- [Login Page](#Login-Page)
-- [Profile Page](#Profile-Page)
-- [New Review Page](#New-Review-Page)
-- [Edit Review Page](#Edit-Review-Page)
-- [Manage Makes Page](#Manage-Makes-Page)
-- [Edit Make Page](#Edit-Make-Page)
-- [403 Error](#403-Error)
- 
+## Testing Contents
+- [Manual Test Cases](#Manual-Test-Cases)
+    * [Favicon](#Favicon)
+    * [Font](#Font)
+    * [Navbar](#Navbar)
+    * [Footer](#Footer)
+    * [Footer](#Footer)
+    * [Home Page](#Home-Page)
+    * [Register Page](#Register-Page)
+    * [Login Page](#Login-Page)
+    * [Profile Page](#Profile-Page)
+    * [New Review Page](#New-Review-Page)
+    * [Edit Review Page](#Edit-Review-Page)
+    * [Manage Makes Page](#Manage-Makes-Page)
+    * [Edit Make Page](#Edit-Make-Page)
+    * [403 Error](#403-Error)
+- [Completed Testing](#Completed-Testing)
+    * [Browsers](#Browsers)
+    * [Friends and Family](#Friends-and-Family)
+    * [Mobile Friendly Test](#Mobile-Friendly-Test)
+    * [User Story Testing Outcomes](#User-Story-Testing-Outcomes)
 
 #### Return to [README.md](README.md)
 
-### For testing as admin user, please use:
+## Manual Test Cases
 
-#### Username: admin
-#### Password: admin
+For testing as admin user, please use:
 
-## Favicon
+- Username: admin
+- Password: admin
+
+### Favicon
 - A red car must display as the favicon once the page has loaded.
 
 ![Image](static/assets/images/readme-images/favicon-screenshot.png)
 
-## Font
+### Font
 - The font 'Faster One' must be the font used on all titles and headings throughout the site. 
 - The font 'Contrail One' must be the font used in all other areas of the site.
 
-## Navbar
+### Navbar
 
 Display:
 - "CAR OWNER REVIEWS" title on left hand side.
@@ -69,7 +76,7 @@ must appear with the message "YOU HAVE BEEN LOGGED OUT".
 - MANAGE MAKES is selected logged admin in users must be directed to manage makes page.
 - Functionality must remain the same across all pages.
 
-## Footer
+### Footer
 
 Display:
 
@@ -86,7 +93,7 @@ Functionality:
 - Instagram logo selected must redirect to Instagram.com in a new browser window.
 - Twitter logo selected must redirect to Twitter.com in a new browser window.
 
-## Home Page
+### Home Page
 
 Display:
 
@@ -137,7 +144,7 @@ and a register and login button below.
  and Owner fields. 
  - For admin users "EDIT" button and "DELETE" buttons must also display on the accordion. 
 
- <details>
+<details>
 <summary>All reviews Screenshot (Click for image)</summary>
 <p align="center">
 
@@ -174,7 +181,7 @@ and the database.
 </p>
 </details>
 
-## Register Page
+### Register Page
 
 Display:
 
@@ -207,7 +214,7 @@ redirected to the profile page and a flash message must appear: "WELCOME TO THE 
 and password re entered to check if the registration has been successful.
 - The "Login Here" link below must redirect to login page.
 
-## Login Page
+### Login Page
 
 Display:
 
@@ -238,7 +245,7 @@ redirected to the profile page and a flash message must appear: "WELCOME *userna
 ![Image](static/assets/images/readme-images/welcome-profile-screenshot.png)
 - The "Register Here" link below must redirect to login page.
 
-## Profile Page
+### Profile Page
 
 Display:
 
@@ -272,7 +279,7 @@ and the database.
 - If "CANCEL" is selected, it must revert back to the all reviews page.
 - If "ADD NEW REVIEW" is selected users must be directed to the new review page.
 
-## New Review Page
+### New Review Page
 
 Display:
 
@@ -314,7 +321,7 @@ a message: "REVIEW SUCCESSFULLY ADDED".
 ![Image](static/assets/images/readme-images/success-review-screenshot.png)
 
 
-## Edit Review Page
+### Edit Review Page
 
 Display:
 
@@ -326,7 +333,7 @@ Model, Year with "YYYY" placeholder, Review and rating 0-5.
 - A central "SAVE" button with save icon and "CANCEL" button with cancel icon.
 
 <details>
-<summary>New Review Screenshot (Click for image)</summary>
+<summary>Edit Review Screenshot (Click for image)</summary>
 <p align="center">
 
 ![Image](static/assets/images/readme-images/edit-review-screenshot.png)
@@ -358,7 +365,7 @@ message: "REVIEW SUCCESSFULLY EDITED".
 ![Image](static/assets/images/readme-images/review-success-edit-screenshot.png)
 - If the "CANCEL" button is selected the user should be re-directed to the profile page. 
 
-## Manage Makes Page 
+### Manage Makes Page 
 
 - Manage makes page is only accessible as an admin user. To login as admin user please use:
     * username: admin
@@ -423,7 +430,7 @@ permanently deleted from the database.
 "Make" dropdown.
 - If "CANCEL" is selected, it must revert back to the manage makes page.
 
-## Edit Make Page
+### Edit Make Page
 
 Display:
 
@@ -452,7 +459,7 @@ flash message must appear: "MAKE SUCCESSFULLY EDITED"
 in the "Make" dropdown.
 ![Image](static/assets/images/readme-images/make-success-screenshot.png)
 
-## 403 Error
+### 403 Error
 
 To test the 403 error: 
  1. Login as a user.
@@ -464,3 +471,163 @@ To test the 403 error:
 
 ![Image](static/assets/images/readme-images/error-screenshot.png)
 
+## Completed Testing
+
+### Manual Test Case
+
+- A manual test case (detailed above) was carried out and passed.
+
+### Devtools
+
+The website was extensively tested for responsiveness in Google Chrome Devtools on the following devices:
+
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- Phone 5/SE
+- Phone 6/7/8
+- Phone 6/7/8 Plus
+- Phone X
+- Ipad
+- Ipad Pro
+- Surface Duo
+- Galaxy Fold
+
+## Browsers
+
+The website was tested for responsiveness on the following browsers:
+
+- Google Chrome
+- Safari
+- Microsoft Edge
+- Firefox
+
+## Friends and family
+
+I requested some feedback from friends and family on the how the website displays on their devices. It was thereby sucessfully tested on iPhone 7, iPhone 8,
+ iPhone X, iPad, two makes of laptop computer and one desktop this covered Chrome, Microsoft Edge and Safari. 
+
+## Mobile Friendly Test
+
+- Passed the Google mobile friendly test.
+
+![Image](assets/images/readme-images/mobile-friendly-test.png)
+
+## User Story Testing Outcomes
+
+### Visiting User
+
+- "Instantly understand the purpose of the website"
+
+On the home page of the site the user is welcomed and informed of the service the site it providing.
+
+<details>
+<summary>Welcome Section Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/welcome-screenshot.png)
+</p>
+</details>
+
+- "Be able to swiftly decipher site navigation."
+
+The site uses a standard navigation found on most websites and is clearly laid out and not 
+too cluttered.
+
+<details>
+<summary>Side Nav Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/sidenav-screenshot.png)
+</p>
+</details>
+
+- "Find out how good a particular car is?"
+
+Users have the ability to browse or search through the reviews to find how good a particular car is.
+![Image](static/assets/images/readme-images/search-screenshot.png)
+
+- "Be able to register and become a member to post my own review.
+
+Users are told in the Welcome section how they can register and they then have the ability to
+post their own review.
+
+### Returning Users
+
+- "Be able to login and see my profile."
+
+Returning users have the ability to log in and see their profile.
+
+- "Be able to delete and edit my old reviews."
+
+Returning users have the ability to delete and edit their old reviews.
+
+<details>
+<summary>Delete Modal Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/delete-modal-screenshot.png)
+</p>
+</details>
+
+<details>
+<summary>Edit Review Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/edit-review-screenshot.png)
+</p>
+</details>
+
+- "Write a new review."
+
+Returning users have the ability to write a new review.
+
+<details>
+<summary>New Review Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/new-review-screenshot.png)
+</p>
+</details>
+
+- "Be able to log back out again."
+
+Users have the ability to logout, by selecting "LOGOUT" on the navbar.
+![Image](static/assets/images/readme-images/logout.png)
+
+### Admin
+
+- "Log in as an admin user."
+
+Users have the ability of logging in as an admin user by using username: admin | password: admin.
+![Image](static/assets/images/readme-images/welcome-profile-screenshot.png)
+
+- "Delete or edit all member reviews."
+
+Admin has the ability to edit all registered user reviews on the home page accordion.
+
+<details>
+<summary>Admin Edit Reviews Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/all-reviews-screenshot.png)
+</p>
+</details>
+
+- "Search all members reviews."
+
+Admin has the ability to search through all reviews on the homepage.
+![Image](static/assets/images/readme-images/search-screenshot.png)
+
+- "Create, edit and delete the makes of the cars"
+
+Admin has the ability to create, edit and delete the makes of cars on the manage makes page.
+
+<details>
+<summary>Admin Manage Makes Screenshot (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/manage-makes.png)
+</p>
+</details>

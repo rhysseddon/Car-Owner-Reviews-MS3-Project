@@ -61,7 +61,6 @@ As a visiting user I want to:
 -	"Instantly understand the purpose of the website"
 -	"Be able to swiftly decipher site navigation."
 -	"Find out how good a particular car is?"
--	"Be able to search easily to find if there is a review on the car, I am interested in."
 -	"Be able to register and become a member to post my own review."
 
 ### Returning users
