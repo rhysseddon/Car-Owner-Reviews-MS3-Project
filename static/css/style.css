@@ -37,8 +37,8 @@ nav, h1, h2, h3, h4 {
 }
 
 /* Styles accordion titles */
-.collapsible-header .col strong {
-    margin: 10px;
+.accordion-title {
+    margin-right: 10px;
     line-height: 35px;;
 }
 
