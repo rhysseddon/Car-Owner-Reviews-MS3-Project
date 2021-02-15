@@ -29,7 +29,7 @@
     * [IDE and Hosting](#IDE-and-Hosting)
     * [Packages](#Packages)
     * [Tools](#Tools)
-* [Testing](#Testing)
+* [Testing](TESTING.md)
 * [Best Practices](#Best-Practices)
     * [Naming Conventions](#Naming-Conventions)
     * [Code Validation](#Code-Validation)
@@ -593,7 +593,7 @@ All used to help with the development of the backend of the website:
 
 - [Google fonts](http://Fonts.google.com) - Used to obtain the fonts.
 - [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code.
-- [Google fonts](http://Fonts.google.com)- Used for validation of HTML code.
+- [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code.
 - [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
 - [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
 - Google Chrome DevTools - Used for testing website responsiveness.
@@ -614,9 +614,16 @@ All names should be relevant and as consistent as possible to enable the reader 
 
 - Code passed the jsHint validator test with no errors or warnings.
 
-![Image](assets/images/readme-images/jshint-validator-results.png)
+<details>
+<summary>jsHint results (Click for image)</summary>
+<p align="center">
 
-- Code passed the W3 HTML validator on second attempt, after fixing 2 bugs [See fixed bugs](TESTING.md)
+![Image](assets/images/readme-images/jshint-validator-results.png))
+</p>
+</details>
+
+
+- Code passed the W3 HTML validator on second attempt, after fixing 2 errors [See fixed bugs](TESTING.md)
 
 ![Image](assets/images/readme-images/html-validator-passed.png)
 
