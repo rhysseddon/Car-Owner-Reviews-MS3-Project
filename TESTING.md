@@ -668,7 +668,7 @@ used the main element. To fix I changed the `<main>` element on the homepage to 
 <summary>CSS results (Click for image)</summary>
 <p align="center">
 
-![Image](assets/images/readme-images/css-validator.png)
+![Image](static/assets/images/readme-images/css-validator.png)
 </p>
 </details>
 
