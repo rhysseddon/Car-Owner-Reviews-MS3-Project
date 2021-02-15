@@ -646,6 +646,30 @@ within the jinja for loop, so added `modal{{loop.index}}` to the modal id so the
  increment on each iteration of the jinja for loop.
 Credit: [Stack Overflow](https://stackoverflow.com/questions/46033541/flask-template-jinja-not-looping-as-expected)
 
+
+- Nu HTML validator test had 2 errors relating to the `<main>` semanitc element. "The main element must to appear as a
+decendant of the main element" and "A document must not include more than one visible main element". These errors were 
+because I had used the main element on the base template and extended that template on the home page where I had also
+used the main element. To fix I changed the `<main>` element on the homepage to a `<div>`.  
+
+<details>
+<summary>Nu HTML check errors (Click for image)</summary>
+<p align="center">
+
+![Image](static/assets/images/readme-images/html-fail.png)
+</p>
+</details>
+
 ## Outstanding Bugs
+
+- CSS validator found an 1 error. This was unable to be resolved as it was an error from the Materialize CDN.
+
+<details>
+<summary>CSS results (Click for image)</summary>
+<p align="center">
+
+![Image](assets/images/readme-images/css-validator.png)
+</p>
+</details>
 
 ### Return to [README.md](README.md)

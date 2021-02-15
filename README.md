@@ -598,6 +598,7 @@ All used to help with the development of the backend of the website:
 - [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
 - Google Chrome DevTools - Used for testing website responsiveness.
 - [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
+- [Pep8online.com/](http://pep8online.com/) - Used for validating python code.
 
 ## Testing
 For the testing page [(click Here)](TESTING.md)
@@ -618,18 +619,34 @@ All names should be relevant and as consistent as possible to enable the reader 
 <summary>jsHint results (Click for image)</summary>
 <p align="center">
 
-![Image](assets/images/readme-images/jshint-validator-results.png))
+![Image](assets/images/readme-images/jshint-validator-results.png)
 </p>
 </details>
 
 
 - Code passed the W3 HTML validator on second attempt, after fixing 2 errors [See fixed bugs](TESTING.md)
 
-![Image](assets/images/readme-images/html-validator-passed.png)
+![Image](assets/images/readme-images/html-validator.png)
 
-- CSS W3 validator had 2 errors. [See outstanding bugs](TESTING.md)
+- CSS W3 validator had 1 error. [See outstanding bugs](TESTING.md)
+
+<details>
+<summary>CSS results (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/images/readme-images/css-validator.png)
+</p>
+</details>
+
+- Code passed pep8 online validator to confirm code was pep8 compliant.
+
+<details>
+<summary>PEP8 results (Click for image)</summary>
+<p align="center">
+
+![Image](assets/images/readme-images/pep8-result.png)
+</p>
+</details>
 
 
 ## Deployment
@@ -678,7 +695,9 @@ Default environment variables setup for env.py is as follows:
 
 ## Credits
 
-### Problems Encountered
+### Features
+
+- Took inspiration for the page layout and functionality from the CI Task Manager tutorial.
 
 ### Images
 
@@ -686,4 +705,7 @@ Default environment variables setup for env.py is as follows:
 
 ### Acknowledgements
 
+- Friends and family for their honest opinions and checking responsiveness on there devices.
+- Code Institute Slack Channel for valuable guidance and opinions.
+- Mentor Rohit Sharma for his excellent guidance and advice.
 
