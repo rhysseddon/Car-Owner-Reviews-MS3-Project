@@ -3,7 +3,7 @@
     $('.collapsible').collapsible();
     $('select').formSelect();
     $('.modal').modal(); 
-    /**
+     /**
      * This function validates the choose make input on the new review form,
      * If the input is not filled in correctly the input will turn red,
      * If the input is correct it will turn green.

@@ -626,7 +626,7 @@ All names should be relevant and as consistent as possible to enable the reader 
 
 - Code passed the W3 HTML validator on second attempt, after fixing 2 errors [See fixed bugs](TESTING.md)
 
-![Image](assets/images/readme-images/html-validator.png)
+![Image](static/assets/images/readme-images/html-validator.png)
 
 - CSS W3 validator had 1 error. [See outstanding bugs](TESTING.md)
 
@@ -634,7 +634,7 @@ All names should be relevant and as consistent as possible to enable the reader 
 <summary>CSS results (Click for image)</summary>
 <p align="center">
 
-![Image](assets/images/readme-images/css-validator.png)
+![Image](static/assets/images/readme-images/css-validator.png)
 </p>
 </details>
 
@@ -644,7 +644,7 @@ All names should be relevant and as consistent as possible to enable the reader 
 <summary>PEP8 results (Click for image)</summary>
 <p align="center">
 
-![Image](assets/images/readme-images/pep8-result.png)
+![Image](static/assets/images/readme-images/pep8-result.png)
 </p>
 </details>
 
