@@ -1,3 +1,4 @@
+'''Flask app setup'''
 import os
 from flask import (
     Flask, flash, render_template,
@@ -58,11 +59,11 @@ def register():
             flash("Username already taken!")
             return redirect(url_for("register"))
 
-        register = {
+        register_form = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(register)
+        mongo.db.users.insert_one(register_form)
 
         # put the user into 'session' cookie
         session["user"] = request.form.get("username").lower()
@@ -206,7 +207,6 @@ def delete_review(review_id):
     flash("Review Successfully Deleted")
 
     if session["user"] == "admin":
-        # needs to redirect to home when admin deletes on home
         return redirect(url_for(
             "get_reviews", username=session["user"]))
 

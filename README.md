@@ -33,8 +33,8 @@
 * [Best Practices](#Best-Practices)
     * [Naming Conventions](#Naming-Conventions)
     * [Code Validation](#Code-Validation)
+* [Database Setup](#Database-Setup)
 * [Deployment](#Deployment)
-    * [Setup](#Setup)
     * [Heroku Deployment](#Heroku-Deployment)
     * [Cloning on GitHub](#Cloning-on-GitHub)
 * [Credits](#Credits)
@@ -648,10 +648,7 @@ All names should be relevant and as consistent as possible to enable the reader 
 </p>
 </details>
 
-
-## Deployment
-
-### Setup
+## Database Setup
 1. In the IDE create an env.py file to store the sensitive data and hidden using environment variables.
 Then add to a .gitignore file so it is ignored when pushing to gitHub.
 Default environment variables setup for env.py is as follows:
@@ -662,36 +659,42 @@ Default environment variables setup for env.py is as follows:
 - os.environ.setdefault("MONGO_URI", "Added by user")
 - os.environ.setdefault("MONGO_DBNAME", "Added by user")
 
-2. Add required files for Heroku to run the app. Create requirements.txt and Procfile:
-- `$ pip3 freeze --local > requirements.txt`
-- `$ echo web: python app.py > Procfile`
-3. Push these 2 files to gitHub.
+## Deployment
 
 ### Heroku Deployment
 
-1. Login to Heroku.com and from dashboard go to "new" - "create new app" and add details of app to create.
+1. Add required files for Heroku to run the app. Create requirements.txt and Procfile:
+- `$ pip3 freeze --local > requirements.txt`
+- `$ echo web: python app.py > Procfile`
+2. Push these 2 files to gitHub.
+3. Login to Heroku.com and from dashboard go to "new" - "create new app" and add details of app to create.
 ![Image](static/assets/images/readme-images/create-new-screenshot.png)
-2. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
+4. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
 ![Image](static/assets/images/readme-images/github-connect-screenshot.png)
-3. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.  
-4. Go to settings tab for the app and select "Reveal Config Vars".
+5. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.  
+6. Go to settings tab for the app and select "Reveal Config Vars".
 ![Image](static/assets/images/readme-images/config-screenshot.png)
-5. Add in the variables from the env.py file.
-6. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
-7. Under "Manual Deploy" select "Deploy Branch"
-8. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
+7. Add in the variables from the env.py file.
+8. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
+9. Under "Manual Deploy" select "Deploy Branch"
+10. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
 ![Image](static/assets/images/readme-images/deployed-screenshot.png)
 
 
 ### Cloning on GitHub
-- Login to GitHub.com.
-- Open my repositories.
-- Click "Code" then under "Clone" copy the link with the HTTPS URL.  
+1. Login to GitHub.com.
+2. Open my repositories.
+3. Click "Code" then under "Clone" copy the link with the HTTPS URL.  
 ![Image](static/assets/images/readme-images/download-clone-screenshot.png)
-- Go to the terminal in your IDE environment. 
-- Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
-- Type `git clone` and paste the copied HTTPS URL.
-- After pressing enter the clone will be saved to your chosen directory. 
+4. Go to the terminal in your IDE environment. 
+5. Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
+6. Type `git clone` and paste the copied HTTPS URL.
+7. After pressing enter the clone will be saved to your chosen directory. 
+
+### Local Deployment On Gitpod
+
+- Clone repository (see steps above).
+
 
 ## Credits
 
