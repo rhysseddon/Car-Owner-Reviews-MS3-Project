@@ -10,10 +10,9 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix white-text"></i>
-                        <input id="username" name="username" type="text" minlength="5" maxlength="12"
-                            pattern="^[a-zA-Z0-9]{5,12}$" class="validate" required>
-                        <label for="username" class="white-text">Please enter a username - between 5 and 12
-                            characters</label>
+                        <input id="username" name="username" type="text" minlength="5" maxlength="50"
+                            pattern="^[a-zA-Z0-9@.]{5,50}$" class="validate" required>
+                        <label for="username" class="white-text">Please new username</label>
                     </div>
                 </div>
                 <!-- Password input -->
@@ -22,8 +21,17 @@
                         <i class="fas fa-key prefix white-text"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="12"
                             pattern="^[a-zA-Z0-9]{5,12}$" class="validate" required>
-                        <label for="password" class="white-text">Please enter a password - between 5 and 12
+                        <label for="password" class="white-text">Enter Password - 5-12
                             characters</label>
+                    </div>
+                </div>
+                <!-- Confirm password input -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-key prefix white-text"></i>
+                        <input id="confirm_password" name="confirm_password" type="password" minlength="5" maxlength="12"
+                            pattern="^[a-zA-Z0-9]{5,12}$" class="validate" required>
+                        <label for="confirm_password" class="white-text">Please confirm password</label>
                     </div>
                 </div>
                 <!-- Register button -->
