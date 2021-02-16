@@ -672,4 +672,6 @@ used the main element. To fix I changed the `<main>` element on the homepage to 
 </p>
 </details>
 
+- The W3 Nu HTML validator had 1 remaining error due to the Jinja templating so could not be resolved.
+
 ### Return to [README.md](README.md)
