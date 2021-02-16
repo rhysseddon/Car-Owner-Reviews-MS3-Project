@@ -461,15 +461,18 @@ flash message must appear: "MAKE SUCCESSFULLY EDITED"
 in the "Make" dropdown.
 ![Image](static/assets/images/readme-images/make-success-screenshot.png)
 
-### 403 Error
+### Error Page
 
-To test the 403 error: 
+To test the error page: 
  1. Login as a user.
  2. Copy the URL from the browser.
  3. Select "LOGOUT" in the navbar.
  4. Paste the URL into the browser.
- 5. 403 Error page should appear with the heading "FORBIDDEN ERROR 403"
- 6. Repeat steps 1 to 5 pasting the URL on the homepage and the register page.
+ 5. Error page should appear with the heading "PAGE NOT FOUND".
+ 6. Below should read "The page you are trying to access does not exist or is forbidden. Click Here to return to 
+ home.
+ 7. "Here" should be a link that should re-direct to home page.
+ 8. Repeat steps 1 to 7 pasting the URL on the homepage and the register page.
 
 ![Image](static/assets/images/readme-images/error-screenshot.png)
 

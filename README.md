@@ -512,10 +512,10 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 ### Defensive Programming
 
-#### 403 Error
+#### Error Page
 
 - Defensive programming will be put in place to prevent non logged in users from forcing there way in by
-adding the correct URL. Instead a 403 error will appear.
+adding the correct URL. Instead an error page will appear.
 
 #### Modal 
 
@@ -524,7 +524,6 @@ reviews accidentally.
 - When deleting makes or reviews users should be prompted with a pop up modal.
 - The modal should contain the title "Are You Sure You Want To Delete?"
 - Centralised cancel and delete buttons.
-
 
 ### Features To Add In The Future
 -	The ability to upload pictures to the profiles, these could be of the car or the user or both.
