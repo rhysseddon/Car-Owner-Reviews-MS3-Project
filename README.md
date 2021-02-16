@@ -33,14 +33,17 @@
 * [Best Practices](#Best-Practices)
     * [Naming Conventions](#Naming-Conventions)
     * [Code Validation](#Code-Validation)
-* [Database Setup](#Database-Setup)
 * [Deployment](#Deployment)
+    * [Setup](#Setup)
     * [Heroku Deployment](#Heroku-Deployment)
     * [Cloning on GitHub](#Cloning-on-GitHub)
+    * [Local Deployment On Gitpod](#Local-Deployment-On-Gitpod)
 * [Credits](#Credits)
     * [Problems Encountered](#Problems-Encountered)
     * [Images](#Images)
     * [Acknowledgements](#Acknowledgements)
+
+The live deployed website can be found [Here](https://car-owner-reviews-ms3-project.herokuapp.com/)
 
 ## Purpose
 
@@ -648,18 +651,20 @@ All names should be relevant and as consistent as possible to enable the reader 
 </p>
 </details>
 
-## Database Setup
-1. In the IDE create an env.py file to store the sensitive data and hidden using environment variables.
-Then add to a .gitignore file so it is ignored when pushing to gitHub.
-Default environment variables setup for env.py is as follows:
+## Deployment
+
+### Setup
+- In the IDE create an env.py file to store the sensitive data and hidden using environment variables.
+- Create a .gitignore file for files to be ignored when pushing to gitHub.
+- Add env.py file and auto generated `__pycache__/` file to the .gitignore file.
+- Default environment variables setup for env.py is as follows:
 - Import os
+- *Blank Line*
 - os.environ.setdefault("IP", "Added by user")
 - os.environ.setdefault("PORT", "Added by user")
 - os.environ.setdefault("SECRET_KEY", "Added by user")
 - os.environ.setdefault("MONGO_URI", "Added by user")
 - os.environ.setdefault("MONGO_DBNAME", "Added by user")
-
-## Deployment
 
 ### Heroku Deployment
 
@@ -672,7 +677,7 @@ Default environment variables setup for env.py is as follows:
 4. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
 ![Image](static/assets/images/readme-images/github-connect-screenshot.png)
 5. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.  
-6. Go to settings tab for the app and select "Reveal Config Vars".
+6. Go to settings tab for the app and select "Reveal Config Vars".  
 ![Image](static/assets/images/readme-images/config-screenshot.png)
 7. Add in the variables from the env.py file.
 8. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
@@ -680,6 +685,7 @@ Default environment variables setup for env.py is as follows:
 10. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
 ![Image](static/assets/images/readme-images/deployed-screenshot.png)
 
+The live Heroku deployment can be found [Here](https://car-owner-reviews-ms3-project.herokuapp.com/) 
 
 ### Cloning on GitHub
 1. Login to GitHub.com.
@@ -693,8 +699,10 @@ Default environment variables setup for env.py is as follows:
 
 ### Local Deployment On Gitpod
 
-- Clone repository (see steps above).
-
+1. Follow steps above to clone repository.
+2. Install the libraries from the requirements.txt, in the terminal type - `pip3 install -r requirements.txt`.
+3. Follow the "setup" steps above to create env.py and .gitignore files for the hidden environment variables.
+4. The app can now be opened in a browser by typing in the terminal: `python3 app.py`.
 
 ## Credits
 
