@@ -28,7 +28,7 @@
 
 ## Manual Test Cases
 
-For testing as admin user, please use:
+For testing as an admin user, please use:
 
 - Username: admin
 - Password: admin
@@ -209,7 +209,7 @@ Functionality:
 
 - The username input fields must only allow 50 characters to be entered.
 - The username input fields must only allow numbers, letters, @ and full stop characters to be entered.
-- The username entered already exists in the database a flash message must appear with "USERNAME ALREADY TAKEN".  
+- If the username entered already exists in the database a flash message must appear with "USERNAME ALREADY TAKEN".  
 ![Image](static/assets/images/readme-images/taken-username-screenshot.png)
 - The password input fields must only allow between 5 and 12 numbers or letters to be entered.
 - If the entered passwords do not match in both password fields a flash message must appear "PASSWORDS DO NOT MATCH".  
