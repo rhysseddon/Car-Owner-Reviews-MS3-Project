@@ -1,31 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h3 class="center-align">Edit Makes</h3>
-
+    <div class="container">
+        <h3 class="center-align">Edit Makes</h3>
         <div class="row card-panel grey lighten-5">
-        <form class="col s8 offset-s2" method="POST" action="{{ url_for('edit_makes', makes_id=makes._id) }}">
-            <!-- category name -->
-            <div class="row">
-                <div class="input-field col s8 offset-s2">
-                    <i class="fas fa-folder-open prefix"></i>
-                    <input id="make" name="make" minlength="1" maxlength="15"
-                        type="text" value="{{ makes.make }}" class="validate" required>
-                    <label for="make">Edit Make</label>
+            <form class="col s8 offset-s2" method="POST" action="{{ url_for('edit_makes', makes_id=makes._id) }}">
+                <!-- category name -->
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="fas fa-folder-open prefix"></i>
+                        <input id="make" name="make" minlength="1" maxlength="15" type="text" value="{{ makes.make }}"
+                            class="validate" required>
+                        <label for="make">Edit Make</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s8 offset-s2 center-align">
-                    <a href="{{ url_for('get_makes') }}" class="btn-large teal darken-2">
-                        Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
-                    <button type="submit" class="btn-large teal darken-2">
-                        Save <i class="fas fa-edit right"></i>
-                    </button>
+                <div class="row">
+                    <div class="col s8 offset-s2 center-align">
+                        <a href="{{ url_for('get_makes') }}" class="btn-large teal darken-2">
+                            Cancel <i class="fas fa-times-circle right"></i>
+                        </a>
+                        <button type="submit" class="btn-large teal darken-2">
+                            Save <i class="fas fa-edit right"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 
 {% endblock %}
