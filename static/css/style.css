@@ -89,7 +89,13 @@ nav .brand-logo {
 font-size: 1.3rem;
 }
 
+/* Styles small buttons in mobile view */
 .btn-small {
     padding: 0px 5px;
+}
+
+/* Styles footer content in mobile view */
+footer .row .col {
+    padding: 0px 10px;
 }
 }
