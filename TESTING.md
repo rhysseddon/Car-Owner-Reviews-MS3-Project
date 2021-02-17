@@ -190,8 +190,9 @@ Display:
 - Must retain the basic layout and remain responsive on all screen sizes.
 - Must have the central title "REGISTER"
 - Central card panel form should display.
-- Username input with icon and placeholder "Please enter a username - between 5 and 12 characters"  
-- Password input with icon and placeholder "Please enter a password - between 5 and 12 characters"
+- Username input with icon and placeholder "Enter New Username"  
+- Password input with icon and placeholder "Enter Password 5 - 12 Characters"
+- Confirm Password input with icon and placeholder "Confirm Password"
 - Central "REGISTER" button.
 - Below card panel centrally must read "Already Registered? Login Here" and the "Login Here" text 
 must display as a link.  
@@ -206,7 +207,13 @@ must display as a link.
 
 Functionality:
 
-- The username and password input fields must only allow 12 characters to be entered.
+- The username input fields must only allow 50 characters to be entered.
+- The username input fields must only allow numbers, letters, @ and full stop characters to be entered.
+- The username entered already exists in the database a flash message must appear with "USERNAME ALREADY TAKEN".  
+![Image](static/assets/images/readme-images/taken-username-screenshot.png)
+- The password input fields must only allow between 5 and 12 numbers or letters to be entered.
+- If the entered passwords do not match in both password fields a flash message must appear "PASSWORDS DO NOT MATCH".  
+![Image](static/assets/images/readme-images/password-match-screenshot.png)
 - If less than 5 characters are entered the below line must turn red and when the 
 register button is selected a warning will appear that reads: "Please match the format requested".
 - If both fields are correctly completed the below lines will turn green, the user will be
@@ -223,13 +230,13 @@ Display:
 - Must retain the basic layout and remain responsive on all screen sizes.
 - Must have the central title "LOGIN"
 - Central card panel form must display.
-- Username input with icon and placeholder "Please enter a username - between 5 and 12 characters"  
-- Password input with icon and placeholder "Please enter a password - between 5 and 12 characters"
+- Username input with icon and placeholder "Enter Username"  
+- Password input with icon and placeholder "Enter Password"
 - Central "LOGIN" button.
 - Below card panel centrally must read "Not Registered? Register Here" and the "Register Here" text 
 must display as a link.  
 
- <details>
+<details>
 <summary>Login Screenshot (Click for image)</summary>
 <p align="center">
 
@@ -242,6 +249,9 @@ Functionality:
 - The username and password input fields must only allow 12 characters to be entered.
 - If less than 5 characters are entered the below line must turn red and when the 
 login button is selected a warning will appear that reads: "Please match the format requested".
+- If the username or password is entered incorrectly a flash message must appear with:
+"INCORRECT USERNAME AND/OR PASSWORD"  
+![Image](static/assets/images/readme-images/incorrect-screenshot.png)
 - If both fields are correctly completed the below lines will turn green, the user will be
 redirected to the profile page and a flash message must appear: "WELCOME *username*"  
 ![Image](static/assets/images/readme-images/welcome-profile-screenshot.png)

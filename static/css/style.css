@@ -86,16 +86,23 @@ footer .row {
 @media (max-width: 500px) {
 /* Styles brand logo in mobile view */
 nav .brand-logo {
-font-size: 1.3rem;
-}
-
-/* Styles small buttons in mobile view */
-.btn-small {
-    padding: 0px 5px;
+font-size: 1.8rem;
 }
 
 /* Styles footer content in mobile view */
 footer .row .col {
     padding: 0px 10px;
+}
+}
+
+/* Tablet view */
+@media (max-width: 1200px) {
+/* Styles nav titles in tablet view */
+nav .brand-logo {
+font-size: 1.6rem;
+}
+
+.nav-links li a {
+    font-size: 1rem
 }
 }

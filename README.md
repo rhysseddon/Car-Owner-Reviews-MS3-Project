@@ -61,9 +61,9 @@ The reason for creating this project is for my third milestone project for a sof
 ### Visiting users
 
 As a visiting user I want to:
--	"Instantly understand the purpose of the website"
+-	"Instantly understand the purpose of the website."
 -	"Be able to swiftly decipher site navigation."
--	"Find out how good a particular car is?"
+-	"Find out how good a particular car is."
 -	"Be able to register and become a member to post my own review."
 
 ### Returning users
@@ -72,24 +72,26 @@ As a returning user I would like to:
 -	"Be able to login and see my profile."
 -	"Be able to delete and edit my old reviews."
 -	"Write a new review."
--	"Be able to log back out again."
+-	"Be able to log out again."
 
 ### Admin users
 
 As an admin user I require the ability to:
 -   "Log in as an admin user."
 -   "Delete or edit all member reviews."
--   "Search all members reviews."
--   "Create, edit and delete the makes of the cars"
+-   "Search all member reviews."
+-   "Create, edit and delete the makes of the cars."
 
 # UX
 
 ## Strategy
 
-As the site owner my goal is to create a place for car owners to share their experience of owning a particular car and provide this information clearly to other users of the site.  To achieve this, I aim provide users with the ability to:
+As the site owner my goal is to create a place for car owners to share their experience of owning a particular car 
+and provide this information clearly to other users of the site.  To achieve this, 
+I aim to provide users with the ability to:
 -	Add their own reviews.
 -	Browse other users’ reviews.
--	Search other users’ reviews.
+-	Search other users’ reviews.  
 The target audience for the site will be:
 -	Users that want to inform everyone of how good or bad their car is.
 -	Users that are looking to buy a new car and require impartial information.
@@ -100,28 +102,28 @@ The target audience for the site will be:
 The user should:
 -	Be able to navigate the site easily.
 -	Expect the site to load quickly.
--	Read other users reviews.
+-	Read other user's reviews.
 -	Create, read, update and delete their own reviews.
 
 ## Scope
 
 Based upon the strategy the features and functionality I want to include are as follows:
--	Car related hero image
+-	Car related hero image.
 -	A paragraph welcoming the user and explaining the websites purpose.
 -	Ability to register, login and logout.
 -	A search box where the user can search for reviews.
 -	An accordion containing all the reviews so the user can browse through them.
--	An accordion containing the current profile owners’ reviews.
--	Ability for the user create, read, edit or delete their reviews.
--	A form for the user to fill out containing the make, model, year and review.
+-	An accordion containing the current profile owner's reviews.
+-	Ability for the user to create, read, edit or delete their reviews.
+-	A form for the user to fill out containing the make, model, year and review text.
 -	Ability for the user to rate the car from 0 to 5.
--	A form with the ability to edit make, model, year and review.
+-	A form with the ability to edit make, model, year and review text.
 -	A page containing all the makes with options to delete or edit them for the admin user.
 
 ## Database
 
-To enable create read update an delete functionality the website will require a non-relational data base (No SQL).
-The data base will have three collections:
+To enable create, read, update an delete functionality the website will require a non-relational data base (No SQL).
+The database will have three collections:
 
 ### Users
 
@@ -390,26 +392,26 @@ Functional and modern colour scheme, with a white background to keep clean UX.
 -	Page name on the left-hand side.
 -	Navigation links on the right-hand side.
 -	Navbar colour will be materialize class colour teal darken-2.
--	The navbar links will differ depending on if and who is logged in and on what page. (see each page)
+-	The navbar links will differ depending on if and who is logged in and on what page. (see each page).
 
 ### Footer
 
 -	All pages will contain the same footer.
--	Containing contact and copyright information on the left and social media links on the right.
+-	Footer contains contact and copyright information on the left and social media links on the right.
 
 ### Home Page
 
 -	Car related full width hero image at the top of the page.
 -	A paragraph welcoming the user and explaining the websites purpose with buttons to register and login below.
--	A search box with the title “search reviews”, where the user can search through all reviews.
+-	A search box with the title “Search Reviews”, where the user can search through all reviews.
 -	An accordion with the title “All Reviews” containing all the reviews so the user can browse through them.
 -	Each dropdown will have the title of the make and model of car and the year.
 -	Each dropdown will contain the information:
     * Make
     * Model
     * Year
-	* Review
-	* Rating out of 5.
+	* Review text
+	* Rating out of 5
 
 Nav Links:  
 Logged out – Home | Login | Register.  
@@ -418,15 +420,15 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 ### Profile Page
 
--	Main title of Users Profile and below to the left “Your Reviews” 
--	Accordion containing the current profile owners’ reviews.
+-	Main title of User's Profile and below to the left “Your Reviews” 
+-	Accordion containing the current profile owner's reviews.
 -	Each dropdown will have the title of the make and model of car and the year.
 -	Each dropdown will contain the information:
     * Make
     * Model
     * Year
-	* Review
-	* Rating out of 5.
+	* Review text
+	* Rating out of 5
 -	Buttons so they can edit and delete their reviews on the accordion.
 -	Central button below that links to new review page.
 
@@ -441,7 +443,7 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
     *   A dropdown containing all the car makes for the user to select.
     *   Model input field.
     *   Year input field.
-    *   Review input field.
+    *   Review text input field.
     *	Input field for the user to rate the car from 0 to 5.
     *	A central save button below.
 
@@ -454,6 +456,7 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 -	Title of “Login”
 -	Central container with 2 text boxes for the user to enter their username and password.
 -	Text boxes will have the labels username and password with suitable icons on the left of the labels.
+-   Users will be warned of incorrect username or password.
 -	Login button.
 -	A link to register if not already registered.
 
@@ -466,6 +469,9 @@ Logged out – Home | Login | Register.
 -	Central container with 2 text boxes for the user to enter their username and password.
 -	Text boxes will have the labels username and password with suitable icons on the left of the labels.
 -	Save button.
+-   Users will be warned if username is already taken.
+-   Users will be prompted to enter password twice.
+-   Users will be warned if passwords entered do not match.
 -	A link to login if already registered.
 
 Nav links:  
@@ -478,7 +484,7 @@ Logged out – Home | Login | Register.
     *   A dropdown containing all the car makes for the user to select.
     *   Model input field.
     *   Year input field.
-    *   Review input field.
+    *   Review text input field.
     *	Input field for the user to rate the car from 0 to 5.
     *	A central save and cancel button below.
 
@@ -489,11 +495,11 @@ Admin – Home | Profile | New Review | Manage Makes | Logout.
 
 ### Manage Makes Page (Admin Only)
 
--	Title of “Manage Makes"
--	Sub heading "Add New Make"
+-	Title of “Manage Makes".
+-	Sub heading "Add New Make".
 -   Central text input to insert a new make.
 -   Central "Save Make" button.
--   Sub Heading "Edit Make"
+-   Sub Heading "Edit Make".
 -   Card Panels containing all of the makes in the DB.
 -   Edit and delete button inside each card panel.
 
@@ -525,6 +531,11 @@ reviews accidentally.
 - The modal should contain the title "Are You Sure You Want To Delete?"
 - Centralised cancel and delete buttons.
 
+#### Password Confirmation
+
+- Users will be asked to enter their passwords twice upon registering to verify the password they entered 
+was entered correctly.
+
 ### Features To Add In The Future
 -	The ability to upload pictures to the profiles, these could be of the car or the user or both.
 -	Star rating system where user can click a radio button of stars 1 to 5. 
@@ -535,9 +546,9 @@ reviews accidentally.
 
 ### Languages 
 
-- Html: Used for the site structure.
+- HTML: Used for the site structure.
 - CSS: Used for adding styles to the website.
-- Javascript: Used to add the games interactive features.
+- Javascript: Used to add the website interactive features.
 - Python: Used to handle the backend functionality.
 
 ### Libraries
@@ -569,7 +580,7 @@ Input Fields | For add text user input
 
 #### JQuery
 
-Used for event handling and validating the choose make input on the new review form.
+Used for event handling and validating the "choose make" input on the new review form.
 
 ### IDE and Hosting
 
@@ -600,7 +611,7 @@ All used to help with the development of the backend of the website:
 - [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
 - Google Chrome DevTools - Used for testing website responsiveness.
 - [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
-- [Pep8online.com/](http://pep8online.com/) - Used for validating python code.
+- [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
 
 ## Testing
 For the testing page [(click Here)](TESTING.md)
@@ -611,7 +622,7 @@ All names should be relevant and as consistent as possible to enable the reader 
 - Javacript functions are written in camelCase. 
 - Class and IDs are written in lowercase and multi word names are joined with a hyphen.
 - File names and image names are written in lowercase and multi word names are joined with a hyphen.
-- Multi word Python function and variable news are joined with an underscore. 
+- Multi word Python function and variable names are joined with an underscore. 
 
 ### Code Validation
 
@@ -715,7 +726,7 @@ The live Heroku deployment can be found [Here](https://car-owner-reviews-ms3-pro
 
 ### Acknowledgements
 
-- Friends and family for their honest opinions and checking responsiveness on there devices.
+- Friends and family for their honest opinions and checking responsiveness on their devices.
 - Code Institute Slack Channel for valuable guidance and opinions.
 - Mentor Rohit Sharma for his excellent guidance and advice.
 
