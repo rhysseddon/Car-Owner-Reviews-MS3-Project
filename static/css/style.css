@@ -33,7 +33,6 @@ nav, h1, h2, h3, h4 {
 /* Styles search bar on home page */
 .row .col .search-bar {
     padding-left: 11vw;
-   
 }
 
 /* Styles accordion titles */
@@ -45,6 +44,7 @@ nav, h1, h2, h3, h4 {
 /* Styles reviews heading on profile page */
 .your-revs-heading {
     padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 /* Creates a sticky footer  */
@@ -52,7 +52,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
+
 main {
     flex: 1 0 auto;
 }
@@ -71,7 +72,6 @@ footer .row {
 /* Styles the footer links */
 .social {
     font-size: 30px;
-    margin-top: 2%;
 }
 .insta {
     color: #e1306c;;
@@ -88,6 +88,7 @@ footer .row {
 nav .brand-logo {
 font-size: 1.3rem;
 }
+
 .btn-small {
     padding: 0px 5px;
 }
